@@ -1,10 +1,14 @@
 # https://regex101.com/r/jO3iI9/1
+# https://regex101.com/r/FO68Xo/1
+# https://regex101.com/r/wjUGj9/1
+
 import re
 from typing import List, Set
 
 
 class Region:
     _postcode_regex = re.compile(r'((?<![.:\d])\d{6}(?![:\d]))')
+
     _region_name_regex = re.compile(
         r'\b(?:северная осетия|марий эл|[а-яё]{2,}-?[а-яё]{2,})'
         r'(?= (?:автономн[аы][яй] о(?:бласть|круг)'
@@ -24,6 +28,55 @@ class Region:
         r'|(?<=\bкр\. ))'
         r'(?:северная осетия|марий эл|\b[а-яё]{2,}-?[а-яё]{2,})')
 
+    _city_name_regex = re.compile(
+        r'\b(?:г\.?|город) ?'
+        r'('
+        r'(?:'
+        r'(?:'
+        r'стар[аы][йя]'
+        r'|нов[аы][йя]'
+        r'|нижн[ия][йея]'
+        r'|красный'
+        r'|верхн[ия][йея]'
+        r'|велик[и][ей]'
+        r'|белая'
+        r'|советская'
+        r'|сергиев'
+        r'|полярные'
+        r'|петров'
+        r'|павловский'
+        r'|набережные'
+        r'|минеральные'
+        r'|мариинский'
+        r'|малая'
+        r'|лодейное'
+        r'|западная'
+        r'|дагестанские'
+        r'|горячий'
+        r'|гаврилов'
+        r'|вятские'
+        r'|вышний|'
+        r'большой'
+        r')'
+        r' )*'
+        r'\b[а-яё]+-?[а-яё]+-?[а-яё]+)'
+    )
+    _district_regex = re.compile(
+        r'\b\w+-?\w+\b(?= \bрайон\b| \bр-о?н\b)'
+    )
+
+    _settlement_regex = re.compile(
+        r'(?:(?<=\bр\.п\. )'
+        r'|(?<=\bн\.п\. )'
+        r'|(?<=\bп\. )'
+        r'|(?<=\bс\. )'
+        r'|(?<=\bпгт\. )'
+        r'|(?<=\bпгт )'
+        r'|(?<=\bсело )'
+        r'|(?<=\bпоселок ))'
+        r'(\b[а-яё]+-?[а-яё]+)'
+    )
+
     def __init__(self, address):
         self.address = address.lower()
 
@@ -38,19 +91,26 @@ class Region:
 
         return self._region_name_regex.findall(self.address)
 
-    def _get_unique_region_names(self) -> Set[str]:
-        """Возвращает множество уникальных названий регионов."""
+    def _find_city_names(self) -> List[str]:
+        """Возвращает список названий городов
+        по характерным признакам перед их названиями
+        (буква г с точкой или без)."""
 
-        return set(self._find_region_names())
-
-    def _find_city_and_settlement_names(self) -> List[str]:
-        """Возвращает список названий городов и сел
-        по характерным признакам перед их названиями (г., с., пгт. и т.д.)."""
-
-        ...
+        return self._city_name_regex.findall(self.address)
 
     def _find_district_names(self) -> List[str]:
-        """Возвращает название районов."""
+        """Возвращает список названий районов."""
+
+        return self._district_regex.findall(self.address)
+
+    def _find_settlement_names(self) -> List[str]:
+        """Возвращает список названий поселков
+         городского типа, поселков и сел."""
+
+        return self._settlement_regex.findall(self.address)
+
+    def define_region(self):
+        """Возвращает список названий регионов."""
 
         ...
 
