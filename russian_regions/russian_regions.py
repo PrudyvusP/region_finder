@@ -3,7 +3,7 @@
 # https://regex101.com/r/wjUGj9/1
 
 import re
-from typing import List, Set
+from typing import List
 
 
 class Region:
@@ -38,7 +38,7 @@ class Region:
         r'|нижн[ия][йея]'
         r'|красный'
         r'|верхн[ия][йея]'
-        r'|велик[и][ей]'
+        r'|велики[ей]'
         r'|белая'
         r'|советская'
         r'|сергиев'
