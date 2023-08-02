@@ -1,14 +1,14 @@
-# https://regex101.com/r/jO3iI9/1
-# https://regex101.com/r/FO68Xo/1
-# https://regex101.com/r/wjUGj9/1
-
 import re
 from typing import List
 
+from models import Region, Alias
+from session import session
 
-class Region:
+
+class RegionFinder:
     _postcode_regex = re.compile(r'((?<![.:\d])\d{6}(?![:\d]))')
 
+    # https://regex101.com/r/jO3iI9/1
     _region_name_regex = re.compile(
         r'\b(?:северная осетия|марий эл|[а-яё]{2,}-?[а-яё]{2,})'
         r'(?= (?:автономн[аы][яй] о(?:бласть|круг)'
@@ -28,6 +28,7 @@ class Region:
         r'|(?<=\bкр\. ))'
         r'(?:северная осетия|марий эл|\b[а-яё]{2,}-?[а-яё]{2,})')
 
+    # https://regex101.com/r/FO68Xo/1
     _city_name_regex = re.compile(
         r'\b(?:г\.?|город) ?'
         r'('
@@ -65,6 +66,7 @@ class Region:
         r'\b\w+-?\w+\b(?= \bрайон\b| \bр-о?н\b)'
     )
 
+    # https://regex101.com/r/wjUGj9/1
     _settlement_regex = re.compile(
         r'(?:(?<=\bр\.п\. )'
         r'|(?<=\bн\.п\. )'
@@ -109,19 +111,22 @@ class Region:
 
         return self._settlement_regex.findall(self.address)
 
-    def define_region(self):
+    def define_regions(self):
         """Возвращает список названий регионов."""
 
-        ...
+        postcodes = self._find_postcodes()
+        region_names = self._find_region_names()
 
 
-"""
 if __name__ == '__main__':
     with open('input_file.txt', 'r') as f:
         addresses = [strq.strip('\n') for strq in f.readlines()]
         for address in addresses:
-            r = Region(address)
+            r = RegionFinder(address)
             result = r._find_region_names()
-            print(r._find_region_names())
-        ##print(data)
-"""
+            regions = (session
+                       .query(Region)
+                       .join(Alias, Region.aliases)
+                       .filter(Alias.name.in_(result))
+                       .all()
+                       )

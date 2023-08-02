@@ -1,4 +1,4 @@
-from russian_regions.russian_regions import Region
+from russian_regions.russian_regions import RegionFinder
 
 """
 @pytest.fixture(scope='module')
@@ -27,8 +27,8 @@ class TestRegion:
         address = ('125212 Ленинградское шоссе, д. 155 634009,'
                    ' пр-кт Ленина, Томск, Томская область,')
 
-        assert Region(address)._find_postcodes() == ['125212',
-                                                     '634009']
+        assert RegionFinder(address)._find_postcodes() == ['125212',
+                                                           '634009']
 
     def test_find_postcodes_not_geographical_cords(self):
         """Географические координаты
@@ -37,7 +37,7 @@ class TestRegion:
         address = ('57.323161, 38.505162, Совхозная'
                    ' улица, 10А, посёлок городского типа')
 
-        assert not Region(address)._find_postcodes()
+        assert not RegionFinder(address)._find_postcodes()
 
     def test_find_postcodes_five_symb_postcode(self):
         """Последовательность из 5 цифр
@@ -46,7 +46,7 @@ class TestRegion:
         address = ('Новые Лапсары, городской округ Чебоксары,'
                    ' Чувашская Республика, 42803')
 
-        assert not Region(address)._find_postcodes()
+        assert not RegionFinder(address)._find_postcodes()
 
     def test_find_region_names_federal_cities(self):
         """Названия федеральных городов определяются корректно."""
@@ -58,10 +58,10 @@ class TestRegion:
         address2 = ('улица Фрунзе, 19, Новосибирск, 630091,'
                     'Московское шоссе, д. 14, г. Киров')
 
-        assert Region(address)._find_region_names() == ['москва',
-                                                        'санкт-петербург',
-                                                        'севастополь']
-        assert not Region(address2)._find_region_names()
+        assert RegionFinder(address)._find_region_names() == ['москва',
+                                                              'санкт-петербург',
+                                                              'севастополь']
+        assert not RegionFinder(address2)._find_region_names()
 
     def test_find_region_names_republics(self):
         """Названия республик определяются корректно."""
@@ -74,10 +74,10 @@ class TestRegion:
                    'улица Орджоникидзе, 47, Нальчик,'
                    'Кабардино-Балкарская Республика')
 
-        assert Region(address)._find_region_names() == ['татарстан',
-                                                        'удмуртская',
-                                                        'коми',
-                                                        'кабардино-балкарская']
+        assert RegionFinder(address)._find_region_names() == ['татарстан',
+                                                              'удмуртская',
+                                                              'коми',
+                                                              'кабардино-балкарская']
 
     def test_find_region_names_autonomous_regions(self):
         """Названия автономных округов определяются корректно."""
@@ -88,9 +88,9 @@ class TestRegion:
                    'улица Чубынина, 12, Салехард,'
                    'Ямало-Ненецкий автономный округ, 629008')
 
-        assert Region(address)._find_region_names() == ['чукотский',
-                                                        'ненецкий',
-                                                        'ямало-ненецкий']
+        assert RegionFinder(address)._find_region_names() == ['чукотский',
+                                                              'ненецкий',
+                                                              'ямало-ненецкий']
 
     def test_find_region_names_regions(self):
         """Названия областей определяются корректно."""
@@ -99,9 +99,9 @@ class TestRegion:
                    'проспект Ленина, 82, обл. Мурманская Мурманск, 183038,'
                    'Обл Архангельская, г. Архангельск')
 
-        assert Region(address)._find_region_names() == ['ивановская',
-                                                        'мурманская',
-                                                        'архангельская']
+        assert RegionFinder(address)._find_region_names() == ['ивановская',
+                                                              'мурманская',
+                                                              'архангельская']
 
     def test_find_region_names_side_regions(self):
         """Названия краев определяются корректно."""
@@ -112,9 +112,9 @@ class TestRegion:
                    ' кр. Ставропольский,'
                    'ул. ленина 15 Ставропольский край ул. ленина 15')
 
-        assert Region(address)._find_region_names() == ['красноярский',
-                                                        'ставропольский',
-                                                        'ставропольский']
+        assert RegionFinder(address)._find_region_names() == ['красноярский',
+                                                              'ставропольский',
+                                                              'ставропольский']
 
     def test_find_region_names_hard_cases(self):
         """Другие случаи-исключения
@@ -128,15 +128,15 @@ class TestRegion:
                    'проспект Мира, 4, Владикавказ,'
                    'Республика Северная Осетия — Алания')
 
-        assert Region(address)._find_region_names() == ['еврейская',
-                                                        'автономная',
-                                                        'саха',
-                                                        'алтайский',
-                                                        'приморский',
-                                                        'край',
-                                                        'край',
-                                                        'край',
-                                                        'северная осетия']
+        assert RegionFinder(address)._find_region_names() == ['еврейская',
+                                                              'автономная',
+                                                              'саха',
+                                                              'алтайский',
+                                                              'приморский',
+                                                              'край',
+                                                              'край',
+                                                              'край',
+                                                              'северная осетия']
 
     def test_find_city_names(self):
         """Последовательность кириллических символов,
@@ -147,9 +147,9 @@ class TestRegion:
         address = ('г. Ижевск, ул. Ленина 10 г Людиново,'
                    'мозг. Хабаровск город Надежд ул. героев 11')
 
-        assert Region(address)._find_city_names() == ['ижевск',
-                                                      'людиново',
-                                                      'надежд']
+        assert RegionFinder(address)._find_city_names() == ['ижевск',
+                                                            'людиново',
+                                                            'надежд']
 
     def test_find_city_names_with_hyphen(self):
         """Названия городов, содержащих дефис."""
@@ -158,9 +158,9 @@ class TestRegion:
                    'г. Ростов-на-Дону-на-Дону, ул. черная 15,'
                    'г Комсомольск-на-Амуре, д11')
 
-        assert Region(address)._find_city_names() == ['ростов-на-дону',
-                                                      'ростов-на-дону',
-                                                      'комсомольск-на-амуре']
+        assert RegionFinder(address)._find_city_names() == ['ростов-на-дону',
+                                                            'ростов-на-дону',
+                                                            'комсомольск-на-амуре']
 
     def test_find_city_names_with_double_part(self):
         """Названия городов, состоящих из двух слов."""
@@ -169,9 +169,9 @@ class TestRegion:
                    'г. Супер Рофлов, ул. Тестов,'
                    '125313 г Сергиев Посад')
 
-        assert Region(address)._find_city_names() == ['нижний новгород',
-                                                      'супер',
-                                                      'сергиев посад']
+        assert RegionFinder(address)._find_city_names() == ['нижний новгород',
+                                                            'супер',
+                                                            'сергиев посад']
 
     def test_find_district_names(self):
         """Последовательность кириллических символов
@@ -181,16 +181,16 @@ class TestRegion:
                    'Пермский край, Красновишерский р-он,'
                    'Кемеровский р-н')
 
-        assert Region(address)._find_district_names() == ['кушвинский',
-                                                          'красновишерский',
-                                                          'кемеровский']
+        assert RegionFinder(address)._find_district_names() == ['кушвинский',
+                                                                'красновишерский',
+                                                                'кемеровский']
 
     def test_find_district_names_with_hyphen(self):
         """Названия районов, в которых встречается символ "-"."""
 
         address = 'Мариинско-Посадский район с. Вурнары'
 
-        assert Region(address)._find_district_names() == ['мариинско-посадский']
+        assert RegionFinder(address)._find_district_names() == ['мариинско-посадский']
 
     def test_find_settlement_names(self):
         """Последовательность кириллических символов
@@ -200,16 +200,16 @@ class TestRegion:
                    ' п. рофловый, с. вперед, пгт. вперед,'
                    ' пгт опять, село вперед, поселок опять')
 
-        assert Region(address)._find_settlement_names() == ['вурнары',
-                                                            'рабочий',
-                                                            'тестовый',
-                                                            'рофловый',
-                                                            'вперед',
-                                                            'вперед',
-                                                            'опять',
-                                                            'вперед',
-                                                            'опять',
-                                                            ]
+        assert RegionFinder(address)._find_settlement_names() == ['вурнары',
+                                                                  'рабочий',
+                                                                  'тестовый',
+                                                                  'рофловый',
+                                                                  'вперед',
+                                                                  'вперед',
+                                                                  'опять',
+                                                                  'вперед',
+                                                                  'опять',
+                                                                  ]
 
     def test_find_settlement_names_wrong_names(self):
         """Проверка корректности определения границ
@@ -219,4 +219,4 @@ class TestRegion:
                    'пп. Полупоселок,'
                    'селовой агрегат')
 
-        assert not Region(address)._find_settlement_names()
+        assert not RegionFinder(address)._find_settlement_names()
