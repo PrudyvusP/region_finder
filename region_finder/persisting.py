@@ -1,7 +1,11 @@
-from models import Region, Alias
+from typing import List
+
+from dbfread import DBF
+
+from models import Region, Alias, Address
 from session import session
 
-data = [
+regions = [
     {'region_id': 1, 'name': 'Республика Адыгея', 'aliases': ['адыгея']},
     {'region_id': 2, 'name': 'Республика Башкортостан', 'aliases': ['башкортостан']},
     {'region_id': 3, 'name': 'Республика Бурятия', 'aliases': ['бурятия']},
@@ -92,14 +96,78 @@ data = [
     {'region_id': 99, 'name': 'Иные территории, включая город и космодром Байконур', 'aliases': []},
 ]
 
-if __name__ == '__main__':
-    regions = []
-    for d in data:
-        new_region = Region(region_id=d['region_id'], name=d['name'])
-        for alias in d['aliases']:
-            new_alias = Alias(name=alias)
-            new_region.aliases.append(new_alias)
-        regions.append(new_region)
 
-    session.add_all(regions)
-    session.commit()
+def cast_region_name_to_constitute(region_name: str) -> str:
+    """Преобразует название региона
+     в соответствии со ст. 65 Конституцией РФ."""
+
+    region = region_name.lower()
+    if region == 'кемеровская область':
+        return 'Кемеровская область - Кузбасс'
+    elif region in ('южная осетия', 'казахстан', 'германия'):
+        return 'Иные территории, включая город и космодром Байконур'
+    elif region == 'чувашия республика':
+        return 'Чувашская Республика - Чувашия'
+    elif region == 'ханты-мансийский-югра автономный округ':
+        return 'Ханты-Мансийский автономный округ - Югра'
+    elif region == 'ямало-ненецкий автономный округ':
+        return 'Ямало-Ненецкий автономный округ'
+    if 'область' in region or 'край' in region:
+        return region.capitalize()
+    if 'автономный' in region and 'округ' in region:
+        return region.capitalize()
+    region = region.title()
+    if 'Республика' in region:
+        if region.split()[0].endswith('кая'):
+            return region
+        else:
+            return f'Республика {region.split("Республика")[0].rstrip()}'
+    return region
+
+
+def read_from_dbf(filename: str) -> DBF:
+    """Возвращает объект типа DBF по переданному имени."""
+
+    if not filename.endswith('.dbf'):
+        raise TypeError('необходимо грузить .dbf-файлы')
+
+    return DBF(filename)
+
+
+def get_postcodes_from_dbf(postcodes: DBF,
+                           regions: dict) -> List[Address]:
+    """Возвращает список объектов типа Address
+    из последовательности postcodes."""
+
+    new_postcodes = []
+    for postcode in postcodes:
+        locality = postcode.get('CITY').lower()
+        area = postcode.get('AREA').replace(' РАЙОН', '').lower()
+        postcode_region = postcode.get('REGION') or postcode.get('AUTONOM')
+        region_id = regions[cast_region_name_to_constitute(postcode_region)]
+        new_postcodes.append(
+            Address(region_id=region_id, postcode=postcode.get('INDEX'),
+                    area=area, locality=locality)
+        )
+    return new_postcodes
+
+
+if __name__ == '__main__':
+    new_regions, new_aliases = [], []
+
+    for region in regions:
+        region_id = region['region_id']
+        new_region = Region(region_id=region_id, name=region['name'])
+        new_regions.append(new_region)
+        for alias in region['aliases']:
+            new_alias = Alias(region_id=region_id, name=alias)
+            new_aliases.append(new_alias)
+
+    postcodes = read_from_dbf('PIndx09.dbf')
+    region_names_ids = {region.name: region.region_id for region in new_regions}
+    new_postcodes = get_postcodes_from_dbf(postcodes, region_names_ids)
+
+    with session:
+        for item in [new_regions, new_aliases, new_postcodes]:
+            session.bulk_save_objects(item)
+        session.commit()

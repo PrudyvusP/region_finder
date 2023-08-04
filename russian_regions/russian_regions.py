@@ -1,11 +1,34 @@
 import re
+from abc import ABC, abstractmethod
 from typing import List
 
-from models import Region, Alias
-from session import session
 
+class RegionFinder(ABC):
+    """Класс RegionFinder используется для поиска в адресной
+    строке признаков принадлежности к регионам Российской Федерации
 
-class RegionFinder:
+    Атрибуты
+    ----------
+    address : str
+        адресная строка
+
+    Методы
+    -------
+    _find_postcodes():
+        Ищет почтовые индексы РФ и возвращает их список.
+    _find_region_names():
+        Ищет упоминания регионов РФ и возвращает их список.
+    _find_city_names():
+        Ищет упоминания городов РФ и возвращает их список.
+    _find_district_names():
+        Ищет упоминания районов РФ и возвращает их список.
+    _find_settlement_names():
+        Ищет упоминания посёлков и сёл РФ и возвращает их список.
+    define_regions():
+        абстрактный метод, реализующий логику работу по поиску
+        совпадений в справочниках.
+    """
+
     _postcode_regex = re.compile(r'((?<![.:\d])\d{6}(?![:\d]))')
 
     # https://regex101.com/r/jO3iI9/1
@@ -79,7 +102,9 @@ class RegionFinder:
         r'(\b[а-яё]+-?[а-яё]+)'
     )
 
-    def __init__(self, address):
+    def __init__(self, address) -> None:
+        """Конструктор класса."""
+
         self.address = address.lower()
 
     def _find_postcodes(self) -> List[str]:
@@ -111,22 +136,11 @@ class RegionFinder:
 
         return self._settlement_regex.findall(self.address)
 
+    @abstractmethod
     def define_regions(self):
-        """Возвращает список названий регионов."""
+        """Метод должен быть перезаписан с учетом
+        выбранной стратегии хранения и обработки справочной информации.
+        Информацию о почтовых индексах и регионах РФ можно хранить
+        в БД, или в хеш-таблицах, или в файлах."""
 
-        postcodes = self._find_postcodes()
-        region_names = self._find_region_names()
-
-
-if __name__ == '__main__':
-    with open('input_file.txt', 'r') as f:
-        addresses = [strq.strip('\n') for strq in f.readlines()]
-        for address in addresses:
-            r = RegionFinder(address)
-            result = r._find_region_names()
-            regions = (session
-                       .query(Region)
-                       .join(Alias, Region.aliases)
-                       .filter(Alias.name.in_(result))
-                       .all()
-                       )
+        pass

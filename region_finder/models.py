@@ -10,6 +10,8 @@ class Base(DeclarativeBase):
 
 
 class Region(Base):
+    """Модель региона РФ."""
+
     __tablename__ = 'regions'
 
     region_id: Mapped[int] = mapped_column(primary_key=True)
@@ -21,6 +23,8 @@ class Region(Base):
 
 
 class Alias(Base):
+    """Модель признаков региона РФ."""
+
     __tablename__ = 'aliases'
 
     alias_id: Mapped[int] = mapped_column(primary_key=True)
@@ -33,6 +37,8 @@ class Alias(Base):
 
 
 class Address(Base):
+    """Почтовый адрес РФ."""
+
     __tablename__ = 'addresses'
 
     postcode: Mapped[str] = mapped_column(primary_key=True, index=True)
