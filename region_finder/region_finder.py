@@ -52,7 +52,7 @@ class RegionFinderWithSQLADB(RegionFinder):
             проверяя каждый элемент последовательности sequence на случай,
             его существования только в составе одного региона РФ."""
 
-            results = set()
+            regions = set()
             for item in sequence:
                 item_check_query = (
                     select(func.count(Region.region_id.distinct()))
@@ -62,43 +62,49 @@ class RegionFinderWithSQLADB(RegionFinder):
 
                 if session.scalar(item_check_query) == UNIQUE_REGION_CONST:
                     item_from_city_query = (
-                        select(Region)
+                        select(Region.name)
                         .join(Address, Address.region_id == Region.region_id)
                         .where(model_column == item)
                     )
-                    results.add(session.scalars(item_from_city_query).first())
-            return results
+                    regions.add(session.scalars(item_from_city_query).first())
+            return regions
 
         results = set()
+
         aliases = self._find_region_names()
-        postcodes = self._find_postcodes()
         if aliases:
             for result in get_aliases_from_db(aliases):
                 results.add(result)
+
+        postcodes = self._find_postcodes()
         if postcodes:
             for result in get_postcodes_from_db(postcodes):
                 if result not in results:
                     results.add(result)
 
-        if results: return results
+        if results:
+            return results
 
         cities = self._find_city_names()
         if cities:
             regions_from_cities = get_instances_from_db(cities,
                                                         Address.locality)
-            if regions_from_cities: return regions_from_cities
+            if regions_from_cities:
+                return regions_from_cities
 
         districts = self._find_district_names()
         if districts:
             regions_from_districts = get_instances_from_db(districts,
                                                            Address.area)
-            if regions_from_districts: return regions_from_districts
+            if regions_from_districts:
+                return regions_from_districts
 
         settlements = self._find_settlement_names()
         if settlements:
             settlements_from_cities = get_instances_from_db(settlements,
                                                             Address.locality)
-            if settlements_from_cities: return settlements_from_cities
+            if settlements_from_cities:
+                return settlements_from_cities
 
         return results
 
@@ -108,5 +114,4 @@ if __name__ == '__main__':
         addresses = [strq.strip('\n') for strq in f.readlines()]
         for address in addresses:
             r = RegionFinderWithSQLADB(address)
-            # print(type(r))
             print(r.define_regions())

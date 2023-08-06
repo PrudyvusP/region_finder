@@ -1,4 +1,4 @@
-from russian_regions.russian_regions import RegionFinder
+from .russian_regions import RegionFinder
 
 
 class RegionFinderForTests(RegionFinder):
