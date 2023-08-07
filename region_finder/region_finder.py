@@ -106,6 +106,53 @@ class RegionFinderWithSQLADB(RegionFinder):
             if settlements_from_cities:
                 return settlements_from_cities
 
+        """
+        Ищем города вероятностным подходом типа Калуга, Самара,
+        Брянск, Кострома, Киров, Мичуринск, Сургут, Иваново,
+        Владимир, Кропоткин, Горячий Ключ, Белореченск, Подольск,
+        Находка, Ревда, Курск, Грозный,
+        Благовещенск, Курган, Советский, Чехов, Зеленогорск
+        """
+
+        if cities:
+            for city in set(cities):
+                region_max_id_query = (
+                    select(Region.region_id)
+                    .join(Address, Address.region_id == Region.region_id)
+                    .where(Address.locality == city)
+                    .group_by(Region.region_id)
+                    .order_by(func.count(Address.postcode).desc())
+                    .limit(1)
+                )
+                region_max_id = session.scalar(region_max_id_query)
+                if region_max_id:
+                    region_id_query = (
+                        select(Region.name)
+                        .where(Region.region_id == region_max_id)
+                    )
+                    result = session.scalars(region_id_query).first()
+                    if result and result not in results:
+                        results.add(result)
+
+        if results:
+            return results
+
+        """
+        Обрабатываем ситуации, если почтовый индекс отсутствует в БД.
+        """
+
+        if postcodes:
+            for postcode in postcodes:
+                search_pattern = postcode[0:3] + '%'
+                alias_query = (
+                    select(Region.name)
+                    .join(Address, Address.region_id == Region.region_id)
+                    .where(Address.postcode.like(search_pattern))
+                )
+                result = session.scalars(alias_query).first()
+                if result and result not in results:
+                    results.add(result)
+
         return results
 
 

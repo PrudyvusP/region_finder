@@ -1,6 +1,7 @@
 from typing import List
 
 from sqlalchemy import ForeignKey
+from sqlalchemy import Index
 from sqlalchemy.orm import (DeclarativeBase, Mapped,
                             mapped_column, relationship)
 
@@ -41,12 +42,17 @@ class Address(Base):
 
     __tablename__ = 'addresses'
 
-    postcode: Mapped[str] = mapped_column(primary_key=True, index=True)
+    postcode: Mapped[str] = mapped_column(primary_key=True)
     area: Mapped[str] = mapped_column(nullable=True)
     locality: Mapped[str] = mapped_column(nullable=True)
     region_id: Mapped[int] = mapped_column(
         ForeignKey('regions.region_id'),
         nullable=False
+    )
+    __table_args__ = (
+        Index('ix_addresses_postcode_c_locale',
+              postcode,
+              postgresql_ops={'postcode': 'varchar_pattern_ops'}),
     )
 
     def __repr__(self) -> str:
