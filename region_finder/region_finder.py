@@ -162,3 +162,4 @@ if __name__ == '__main__':
         for address in addresses:
             r = RegionFinderWithSQLADB(address)
             print(r.define_regions())
+            print(r._find_region_names())

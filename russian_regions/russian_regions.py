@@ -36,15 +36,16 @@ class RegionFinder(ABC):
         r'\b(?:северная осетия|марий эл|[а-яё]{2,}-?[а-яё]{2,})'
         r'(?= (?:автономн[аы][яй] о(?:бласть|круг)'
         r'|область|обл\.?'
-        r'|(?:народная )*республика'
+        r'|(?:народная )*республик[иа]'
         r'|респ\.?'
         r'|край'
-        r'|кр\.)\b)'
+        r'|кр\.?'
+        r')\b)'
         r'|\b(?:москва|севастополь|санкт-петербург)\b'
         r'|(?:(?<=область )'
         r'|(?<=обл\. )'
         r'|(?<=\bобл )'
-        r'|(?<=республика )'
+        r'|(?<=республик[аи] )'
         r'|(?<=\bресп\. )'
         r'|(?<=\bресп )'
         r'|(?<=край )'
@@ -102,10 +103,22 @@ class RegionFinder(ABC):
         r'(\b[а-яё]+-?[а-яё]+)'
     )
 
-    def __init__(self, address) -> None:
+    _region_name_sub_regex = re.compile(r'\b(\w+)ой\b (\bобласт)[ьи]\b')
+    _edge_name_sub_regex = re.compile(r'\b(\w+)ого\b (\bкра)[йя]\b')
+
+    def __init__(self, address: str) -> None:
         """Конструктор класса."""
 
-        self.address = address.lower()
+        if not address:
+            raise ValueError('Адрес не должен быть пустым')
+
+        self.address = self._beatify_address(address)
+
+    def _beatify_address(self, address: str) -> str:
+        """Удаляет лишние символы из адресной строки."""
+
+        address = re.sub(r' {2,}', ' ', address.lower())
+        return re.sub(u'\xa0', ' ', address)
 
     def _find_postcodes(self) -> List[str]:
         """Возвращает список почтовых индексов
@@ -116,7 +129,9 @@ class RegionFinder(ABC):
     def _find_region_names(self) -> List[str]:
         """Возвращает список названий регионов."""
 
-        return self._region_name_regex.findall(self.address)
+        address = self._region_name_sub_regex.sub(r'\1ая \2ь', self.address)
+        address = self._edge_name_sub_regex.sub(r'\1ий \2й', address)
+        return self._region_name_regex.findall(address)
 
     def _find_city_names(self) -> List[str]:
         """Возвращает список названий городов
