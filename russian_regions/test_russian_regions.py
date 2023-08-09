@@ -103,6 +103,18 @@ class TestRegion:
                                           'архангельская']
                 )
 
+    def test_find_region_names_regions_dative(self):
+        """Названия регионов в родительном падеже
+        определяются корректно."""
+
+        address = ('Советская улица, 6, Ивановской области, Иваново, 153000,'
+                   'г. Казань, республики Татарстан')
+
+        assert (RegionFinderForTests(address)
+                ._find_region_names() == ['ивановская',
+                                          'татарстан']
+                )
+
     def test_find_region_names_side_regions(self):
         """Названия краев определяются корректно."""
 
