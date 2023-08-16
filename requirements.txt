@@ -5,6 +5,7 @@ iniconfig==2.0.0
 packaging==23.1
 pluggy==1.2.0
 pytest==7.4.0
+region-finder-ru==0.0.1
 SQLAlchemy==2.0.19
 tomli==2.0.1
 typing-extensions==4.7.1

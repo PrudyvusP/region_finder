@@ -1,27 +1,27 @@
-import os
-import sys
 from typing import List, Set
 
+from region_finder_ru.region_finder_ru import RegionFinder
 from sqlalchemy import select, func
 from sqlalchemy.orm.attributes import InstrumentedAttribute
 
-from models import Region, Alias, Address
-from session import session
-
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
-
-from russian_regions.russian_regions import RegionFinder
+from .models import Region, Alias, Address
 
 UNIQUE_REGION_CONST = 1
 
 
 class RegionFinderWithSQLADB(RegionFinder):
 
-    def define_regions(self) -> Set[Region]:
+    def __init__(self, address, session):
+        """Конструктор класса."""
+
+        super().__init__(address)
+        self.session = session
+
+    def define_regions(self) -> Set["Region"]:
         """Переопределяет логику для поиска
         сущностей из справочной БД."""
 
-        def get_aliases_from_db(aliases: List[str]) -> List[Region]:
+        def get_aliases_from_db(aliases: List[str]) -> List["Region"]:
             """Возвращает список объектов типа Region,
             чьи алиасы в списке aliases."""
 
@@ -30,9 +30,9 @@ class RegionFinderWithSQLADB(RegionFinder):
                 .join(Alias, Region.aliases)
                 .where(Alias.name.in_(aliases))
             )
-            return session.scalars(alias_query).all()
+            return self.session.scalars(alias_query).all()
 
-        def get_postcodes_from_db(postcodes: List[str]) -> List[Region]:
+        def get_postcodes_from_db(postcodes: List[str]) -> List["Region"]:
             """Возвращает список объектов типа Region,
             чьи почтовые индексы в списке postcodes."""
 
@@ -43,11 +43,11 @@ class RegionFinderWithSQLADB(RegionFinder):
                     Address.postcode.in_(postcodes)
                 )
             )
-            return session.scalars(postcode_query).all()
+            return self.session.scalars(postcode_query).all()
 
         def get_instances_from_db(
                 sequence: List[str],
-                model_column: InstrumentedAttribute) -> Set[Region]:
+                model_column: InstrumentedAttribute) -> Set["Region"]:
             """Возвращает множество объектов типа Region,
             проверяя каждый элемент последовательности sequence на случай,
             его существования только в составе одного региона РФ."""
@@ -60,13 +60,13 @@ class RegionFinderWithSQLADB(RegionFinder):
                     .where(model_column == item)
                 )
 
-                if session.scalar(item_check_query) == UNIQUE_REGION_CONST:
+                if self.session.scalar(item_check_query) == UNIQUE_REGION_CONST:
                     item_from_city_query = (
                         select(Region.name)
                         .join(Address, Address.region_id == Region.region_id)
                         .where(model_column == item)
                     )
-                    regions.add(session.scalars(item_from_city_query).first())
+                    regions.add(self.session.scalars(item_from_city_query).first())
             return regions
 
         results = set()
@@ -124,13 +124,13 @@ class RegionFinderWithSQLADB(RegionFinder):
                     .order_by(func.count(Address.postcode).desc())
                     .limit(1)
                 )
-                region_max_id = session.scalar(region_max_id_query)
+                region_max_id = self.session.scalar(region_max_id_query)
                 if region_max_id:
                     region_id_query = (
                         select(Region.name)
                         .where(Region.region_id == region_max_id)
                     )
-                    result = session.scalars(region_id_query).first()
+                    result = self.session.scalars(region_id_query).first()
                     if result and result not in results:
                         results.add(result)
 
@@ -149,17 +149,8 @@ class RegionFinderWithSQLADB(RegionFinder):
                     .join(Address, Address.region_id == Region.region_id)
                     .where(Address.postcode.like(search_pattern))
                 )
-                result = session.scalars(alias_query).first()
+                result = self.session.scalars(alias_query).first()
                 if result and result not in results:
                     results.add(result)
 
         return results
-
-
-if __name__ == '__main__':
-    with open('input_file.txt', 'r') as f:
-        addresses = [strq.strip('\n') for strq in f.readlines()]
-        for address in addresses:
-            r = RegionFinderWithSQLADB(address)
-            print(r.define_regions())
-            print(r._find_region_names())

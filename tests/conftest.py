@@ -7,7 +7,7 @@ from region_finder.models import Base, Region
 
 @pytest.fixture(scope='session')
 def engine():
-    return create_engine("sqlite://", echo=True)
+    return create_engine("sqlite://", echo=False)
 
 
 @pytest.fixture(scope='session')

@@ -4,7 +4,7 @@ from typing import List, Tuple, Dict
 
 from dbfread import DBF
 
-from models import Region, Alias, Address
+from region_finder.models import Region, Alias, Address
 from session import session
 
 

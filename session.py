@@ -1,5 +1,5 @@
 from sqlalchemy.orm import Session
 
-from connect import engine
+from create_tables import engine
 
 session = Session(bind=engine)
