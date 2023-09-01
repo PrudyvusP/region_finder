@@ -1,4 +1,4 @@
-name: egrul_fts_api Workflow
+name: region_finder_workflow
 
 on: [push]
 
