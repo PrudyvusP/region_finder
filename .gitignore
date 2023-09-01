@@ -134,3 +134,4 @@ dmypy.json
 *.dbf
 /.idea/
 *.txt
+!requirements_for_tests.txt
