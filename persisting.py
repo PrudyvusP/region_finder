@@ -2,6 +2,7 @@ import argparse
 import json
 from typing import List, Tuple, Dict
 
+import sqlalchemy.exc
 from dbfread import DBF
 
 from region_finder.models import Region, Alias, Address
@@ -87,7 +88,7 @@ def create_region_and_alias_objects(
     return regions_for_db, aliases_for_db
 
 
-def main_logic() -> None:
+def main_logic(session) -> None:
     """Заполняет БД регионами РФ и их алиасами, а также
     почтовыми индексами РФ."""
 
@@ -96,15 +97,23 @@ def main_logic() -> None:
     with open('regions.json', 'r') as f:
         regions_and_aliases = json.load(f)
 
-    new_regions, new_aliases = create_region_and_alias_objects(regions_and_aliases)
-    region_names_ids = {region.name: region.region_id for region in new_regions}
+    new_regions, new_aliases = create_region_and_alias_objects(
+        regions_and_aliases
+    )
+    region_names_ids = {
+        region.name: region.region_id for region in new_regions
+    }
     new_postcodes = create_postcodes_from_dbf(postcodes, region_names_ids)
 
-    with session:
-        for item in [new_regions, new_aliases, new_postcodes]:
-            session.bulk_save_objects(item)
-        session.commit()
+    for item in [new_regions, new_aliases, new_postcodes]:
+        session.bulk_save_objects(item)
+    session.commit()
 
 
 if __name__ == '__main__':
-    main_logic()
+    with session:
+        try:
+            main_logic(session)
+        except sqlalchemy.exc.OperationalError:
+            print('Не удалось заполнить БД, так как таблицы не созданы')
+

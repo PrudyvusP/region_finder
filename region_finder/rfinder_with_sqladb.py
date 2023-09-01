@@ -38,7 +38,7 @@ class RegionFinderWithSQLADB(RegionFinder):
 
             postcode_query = (
                 select(Region.name)
-                .join(Address, Address.region_id == Region.region_id)
+                .join(Address, Region.addresses)
                 .where(
                     Address.postcode.in_(postcodes)
                 )
@@ -56,55 +56,52 @@ class RegionFinderWithSQLADB(RegionFinder):
             for item in sequence:
                 item_check_query = (
                     select(func.count(Region.region_id.distinct()))
-                    .join(Address, Address.region_id == Region.region_id)
+                    .join(Address, Region.addresses)
                     .where(model_column == item)
                 )
 
-                if self.session.scalar(item_check_query) == UNIQUE_REGION_CONST:
+                if (self.session.scalar(item_check_query)
+                        == UNIQUE_REGION_CONST):
                     item_from_city_query = (
                         select(Region.name)
-                        .join(Address, Address.region_id == Region.region_id)
+                        .join(Address, Region.addresses)
                         .where(model_column == item)
                     )
-                    regions.add(self.session.scalars(item_from_city_query).first())
+                    regions.add(
+                        self.session.scalars(item_from_city_query).first()
+                    )
             return regions
 
         results = set()
 
         aliases = self._find_region_names()
-        if aliases:
-            for result in get_aliases_from_db(aliases):
-                results.add(result)
+        for result in get_aliases_from_db(aliases):
+            results.add(result)
 
         postcodes = self._find_postcodes()
-        if postcodes:
-            for result in get_postcodes_from_db(postcodes):
-                if result not in results:
-                    results.add(result)
+        for result in get_postcodes_from_db(postcodes):
+            results.add(result)
 
         if results:
             return results
 
         cities = self._find_city_names()
-        if cities:
-            regions_from_cities = get_instances_from_db(cities,
-                                                        Address.locality)
-            if regions_from_cities:
-                return regions_from_cities
+        regions_from_cities = get_instances_from_db(cities,
+                                                    Address.locality)
+        if regions_from_cities:
+            return regions_from_cities
 
         districts = self._find_district_names()
-        if districts:
-            regions_from_districts = get_instances_from_db(districts,
-                                                           Address.area)
-            if regions_from_districts:
-                return regions_from_districts
+        regions_from_districts = get_instances_from_db(districts,
+                                                       Address.area)
+        if regions_from_districts:
+            return regions_from_districts
 
         settlements = self._find_settlement_names()
-        if settlements:
-            settlements_from_cities = get_instances_from_db(settlements,
-                                                            Address.locality)
-            if settlements_from_cities:
-                return settlements_from_cities
+        settlements_from_cities = get_instances_from_db(settlements,
+                                                        Address.locality)
+        if settlements_from_cities:
+            return settlements_from_cities
 
         """
         Ищем города вероятностным подходом типа Калуга, Самара,
@@ -118,7 +115,7 @@ class RegionFinderWithSQLADB(RegionFinder):
             for city in set(cities):
                 region_max_id_query = (
                     select(Region.region_id)
-                    .join(Address, Address.region_id == Region.region_id)
+                    .join(Address, Region.addresses)
                     .where(Address.locality == city)
                     .group_by(Region.region_id)
                     .order_by(func.count(Address.postcode).desc())
@@ -131,7 +128,7 @@ class RegionFinderWithSQLADB(RegionFinder):
                         .where(Region.region_id == region_max_id)
                     )
                     result = self.session.scalars(region_id_query).first()
-                    if result and result not in results:
+                    if result:
                         results.add(result)
 
         if results:
@@ -146,11 +143,11 @@ class RegionFinderWithSQLADB(RegionFinder):
                 search_pattern = postcode[0:3] + '%'
                 alias_query = (
                     select(Region.name)
-                    .join(Address, Address.region_id == Region.region_id)
+                    .join(Address, Region.addresses)
                     .where(Address.postcode.like(search_pattern))
                 )
                 result = self.session.scalars(alias_query).first()
-                if result and result not in results:
+                if result:
                     results.add(result)
 
         return results

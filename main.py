@@ -15,10 +15,15 @@ def parse_arguments() -> str:
     return args.filename
 
 
-if __name__ == '__main__':
+def main() -> None:
+    """Точка входа в программу."""
 
     with open(parse_arguments(), 'r') as f, session:
         addresses = [strq.strip('\n') for strq in f.readlines()]
         for address in addresses:
             r = RegionFinderWithSQLADB(address, session=session)
-            print(r.define_regions())
+            print(address, r.define_regions())
+
+
+if __name__ == '__main__':
+    main()

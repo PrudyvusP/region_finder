@@ -18,6 +18,7 @@ class Region(Base):
     region_id: Mapped[int] = mapped_column(primary_key=True)
     name: Mapped[str] = mapped_column(nullable=False)
     aliases: Mapped[List["Alias"]] = relationship(back_populates='region')
+    addresses: Mapped[List["Address"]] = relationship(back_populates='region')
 
     def __repr__(self) -> str:
         return f'<Region {self.name}>'
@@ -30,7 +31,9 @@ class Alias(Base):
 
     alias_id: Mapped[int] = mapped_column(primary_key=True)
     name: Mapped[str] = mapped_column(nullable=False)
-    region_id: Mapped[int] = mapped_column(ForeignKey('regions.region_id'), nullable=False)
+    region_id: Mapped[int] = mapped_column(
+        ForeignKey('regions.region_id'),
+        nullable=False)
     region: Mapped["Region"] = relationship(back_populates='aliases')
 
     def __repr__(self) -> str:
@@ -38,7 +41,7 @@ class Alias(Base):
 
 
 class Address(Base):
-    """Почтовый адрес РФ."""
+    """Модель почтового адреса РФ."""
 
     __tablename__ = 'addresses'
 
@@ -49,6 +52,9 @@ class Address(Base):
         ForeignKey('regions.region_id'),
         nullable=False
     )
+
+    region: Mapped["Region"] = relationship(back_populates='addresses')
+
     __table_args__ = (
         Index('ix_addresses_postcode_c_locale',
               postcode,
@@ -56,4 +62,4 @@ class Address(Base):
     )
 
     def __repr__(self) -> str:
-        return f'<Address {self.postcode} - {self.area}>'
+        return f'<Address {self.postcode}>'
