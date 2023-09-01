@@ -1,11 +1,11 @@
 import argparse
 import json
-from typing import List, Tuple, Dict
+from typing import Dict, List, Tuple
 
 import sqlalchemy.exc
 from dbfread import DBF
 
-from region_finder.models import Region, Alias, Address
+from region_finder.models import Address, Alias, Region
 from session import session
 
 
@@ -16,13 +16,13 @@ def cast_region_name_to_constitute(region_name: str) -> str:
     region = region_name.lower()
     if region == 'кемеровская область':
         return 'Кемеровская область - Кузбасс'
-    elif region in ('южная осетия', 'казахстан', 'германия'):
+    if region in ('южная осетия', 'казахстан', 'германия'):
         return 'Иные территории, включая город и космодром Байконур'
-    elif region == 'чувашия республика':
+    if region == 'чувашия республика':
         return 'Чувашская Республика - Чувашия'
-    elif region == 'ханты-мансийский-югра автономный округ':
+    if region == 'ханты-мансийский-югра автономный округ':
         return 'Ханты-Мансийский автономный округ - Югра'
-    elif region == 'ямало-ненецкий автономный округ':
+    if region == 'ямало-ненецкий автономный округ':
         return 'Ямало-Ненецкий автономный округ'
     if 'область' in region or 'край' in region:
         return region.capitalize()
@@ -32,8 +32,7 @@ def cast_region_name_to_constitute(region_name: str) -> str:
     if 'Республика' in region:
         if region.split()[0].endswith('кая'):
             return region
-        else:
-            return f'Республика {region.split("Республика")[0].rstrip()}'
+        return f'Республика {region.split("Республика")[0].rstrip()}'
     return region
 
 
@@ -116,4 +115,3 @@ if __name__ == '__main__':
             main_logic(session)
         except sqlalchemy.exc.OperationalError:
             print('Не удалось заполнить БД, так как таблицы не созданы')
-

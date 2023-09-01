@@ -1,6 +1,6 @@
 from sqlalchemy import select
 
-from region_finder.models import Region, Alias, Address
+from region_finder.models import Address, Alias, Region
 
 
 class TestRegionFinderWithSQLADB:

@@ -2,7 +2,7 @@ import pytest
 from sqlalchemy import create_engine
 from sqlalchemy.orm import Session
 
-from region_finder.models import Base, Region, Alias, Address
+from region_finder.models import Address, Alias, Base, Region
 
 addresses = [
     Address(postcode='692910', locality='находка', region_id=25),

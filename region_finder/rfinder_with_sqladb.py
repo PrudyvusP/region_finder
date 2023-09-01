@@ -1,10 +1,10 @@
 from typing import List, Set
 
 from region_finder_ru.region_finder_ru import RegionFinder
-from sqlalchemy import select, func
+from sqlalchemy import func, select
 from sqlalchemy.orm.attributes import InstrumentedAttribute
 
-from .models import Region, Alias, Address
+from .models import Address, Alias, Region
 
 UNIQUE_REGION_CONST = 1
 

@@ -22,7 +22,7 @@ jobs:
         python -m pip install --upgrade pip 
         pip install flake8 pep8-naming flake8-broken-line flake8-return flake8-isort
         pip install region_finder_ru-0.0.1-py3-none-any.whl
-        pip install -r requirements.txt
+        pip install -r requirements_for_tests.txt
 
     - name: Testing with flake8
       run: python -m flake8
