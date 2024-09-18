@@ -1,5 +1,11 @@
+alembic==1.13.2
 dbfread==2.0.7
-greenlet==2.0.2
+greenlet==3.1.0
+importlib-metadata==8.5.0
+importlib-resources==6.4.5
+Mako==1.3.5
+MarkupSafe==2.1.5
 region-finder-ru==0.0.1
-SQLAlchemy==2.0.19
-typing-extensions==4.7.1
+SQLAlchemy==2.0.35
+typing-extensions==4.12.2
+zipp==3.20.2

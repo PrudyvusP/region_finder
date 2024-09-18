@@ -2,7 +2,7 @@ from sqlalchemy import create_engine
 
 from region_finder.models import Base
 
-engine = create_engine("sqlite:///test.db", echo=False)
+engine = create_engine("sqlite:///alembic/test.db", echo=False)
 
 if __name__ == '__main__':
     try:
