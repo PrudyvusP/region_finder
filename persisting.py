@@ -5,7 +5,7 @@ from typing import Dict, List, Tuple
 import sqlalchemy.exc
 from dbfread import DBF
 
-from region_finder.models import Address, Alias, Region
+from region_finder.models import Address, Alias, Region, Town
 from session import session
 
 
@@ -68,7 +68,7 @@ def parse_arguments() -> DBF:
     return DBF(args.filename)
 
 
-def create_region_and_alias_objects(
+def fill_db_regions_aliases(
         data: List[Dict]
 ) -> Tuple[List[Region], List[Alias]]:
     """Создает списки объектов типа Region и Alias
@@ -87,24 +87,35 @@ def create_region_and_alias_objects(
     return regions_for_db, aliases_for_db
 
 
+def fill_db_towns(data: List[Dict]) -> List["Town"]:
+
+    return [
+        Town(name=d["name"].lower(), region_id=d["region_id"]) for d in data
+    ]
+
+
 def main_logic(session) -> None:
     """Заполняет БД регионами РФ и их алиасами, а также
     почтовыми индексами РФ."""
 
     postcodes = parse_arguments()
 
-    with open('regions.json', 'r') as f:
+    with open('data/regions.json', 'r') as f:
         regions_and_aliases = json.load(f)
 
-    new_regions, new_aliases = create_region_and_alias_objects(
-        regions_and_aliases
-    )
+    new_regions, new_aliases = fill_db_regions_aliases(regions_and_aliases)
+
     region_names_ids = {
         region.name: region.region_id for region in new_regions
     }
     new_postcodes = create_postcodes_from_dbf(postcodes, region_names_ids)
 
-    for item in [new_regions, new_aliases, new_postcodes]:
+    with open('data/towns.json', 'r') as f:
+        towns = json.load(f)
+
+    new_towns = fill_db_towns(towns)
+
+    for item in [new_regions, new_aliases, new_postcodes, new_towns]:
         session.bulk_save_objects(item)
     session.commit()
 

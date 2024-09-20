@@ -17,6 +17,7 @@ class Region(Base):
     name: Mapped[str] = mapped_column(nullable=False)
     aliases: Mapped[List["Alias"]] = relationship(back_populates='region')
     addresses: Mapped[List["Address"]] = relationship(back_populates='region')
+    towns: Mapped[List["Town"]] = relationship(back_populates='region')
 
     def __repr__(self) -> str:
         return f'<Region {self.name}>'
@@ -61,3 +62,21 @@ class Address(Base):
 
     def __repr__(self) -> str:
         return f'<Address {self.postcode}>'
+
+
+class Town(Base):
+    """Модель города РФ."""
+
+    __tablename__ = 'towns'
+
+    town_id: Mapped[int] = mapped_column(primary_key=True)
+    name: Mapped[str] = mapped_column(nullable=False)
+    region_id: Mapped[int] = mapped_column(
+        ForeignKey('regions.region_id'),
+        nullable=False
+    )
+
+    region: Mapped["Region"] = relationship(back_populates='towns')
+
+    def __repr__(self) -> str:
+        return f'<Town {self.name}>'

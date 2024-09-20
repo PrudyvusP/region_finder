@@ -1,0 +1,4662 @@
+[
+    {
+        "name": "Абаза",
+        "region_id": 19
+    },
+    {
+        "name": "Абакан",
+        "region_id": 19
+    },
+    {
+        "name": "Абдулино",
+        "region_id": 56
+    },
+    {
+        "name": "Абинск",
+        "region_id": 23
+    },
+    {
+        "name": "Агидель",
+        "region_id": 2
+    },
+    {
+        "name": "Агрыз",
+        "region_id": 16
+    },
+    {
+        "name": "Адыгейск",
+        "region_id": 1
+    },
+    {
+        "name": "Азнакаево",
+        "region_id": 16
+    },
+    {
+        "name": "Азов",
+        "region_id": 61
+    },
+    {
+        "name": "Ак-Довурак",
+        "region_id": 17
+    },
+    {
+        "name": "Аксай",
+        "region_id": 61
+    },
+    {
+        "name": "Алагир",
+        "region_id": 15
+    },
+    {
+        "name": "Алапаевск",
+        "region_id": 66
+    },
+    {
+        "name": "Алатырь",
+        "region_id": 21
+    },
+    {
+        "name": "Алдан",
+        "region_id": 14
+    },
+    {
+        "name": "Алейск",
+        "region_id": 22
+    },
+    {
+        "name": "Александров",
+        "region_id": 33
+    },
+    {
+        "name": "Александровск",
+        "region_id": 59
+    },
+    {
+        "name": "Александровск-Сахалинский",
+        "region_id": 65
+    },
+    {
+        "name": "Алексеевка",
+        "region_id": 31
+    },
+    {
+        "name": "Алексин",
+        "region_id": 71
+    },
+    {
+        "name": "Алзамай",
+        "region_id": 38
+    },
+    {
+        "name": "Алупка",
+        "region_id": 91
+    },
+    {
+        "name": "Алушта",
+        "region_id": 91
+    },
+    {
+        "name": "Альметьевск",
+        "region_id": 16
+    },
+    {
+        "name": "Амурск",
+        "region_id": 27
+    },
+    {
+        "name": "Анадырь",
+        "region_id": 87
+    },
+    {
+        "name": "Анапа",
+        "region_id": 23
+    },
+    {
+        "name": "Ангарск",
+        "region_id": 38
+    },
+    {
+        "name": "Андреаполь",
+        "region_id": 69
+    },
+    {
+        "name": "Анжеро-Судженск",
+        "region_id": 42
+    },
+    {
+        "name": "Анива",
+        "region_id": 65
+    },
+    {
+        "name": "Апатиты",
+        "region_id": 51
+    },
+    {
+        "name": "Апрелевка",
+        "region_id": 50
+    },
+    {
+        "name": "Апшеронск",
+        "region_id": 23
+    },
+    {
+        "name": "Арамиль",
+        "region_id": 66
+    },
+    {
+        "name": "Аргун",
+        "region_id": 20
+    },
+    {
+        "name": "Ардатов",
+        "region_id": 13
+    },
+    {
+        "name": "Ардон",
+        "region_id": 15
+    },
+    {
+        "name": "Арзамас",
+        "region_id": 52
+    },
+    {
+        "name": "Аркадак",
+        "region_id": 64
+    },
+    {
+        "name": "Армавир",
+        "region_id": 23
+    },
+    {
+        "name": "Армянск",
+        "region_id": 91
+    },
+    {
+        "name": "Армянськ",
+        "region_id": 91
+    },
+    {
+        "name": "Арсеньев",
+        "region_id": 25
+    },
+    {
+        "name": "Арск",
+        "region_id": 16
+    },
+    {
+        "name": "Артем",
+        "region_id": 25
+    },
+    {
+        "name": "Артемовск",
+        "region_id": 24
+    },
+    {
+        "name": "Артемовский",
+        "region_id": 66
+    },
+    {
+        "name": "Архангельск",
+        "region_id": 29
+    },
+    {
+        "name": "Асбест",
+        "region_id": 66
+    },
+    {
+        "name": "Асино",
+        "region_id": 70
+    },
+    {
+        "name": "Астрахань",
+        "region_id": 30
+    },
+    {
+        "name": "Аткарск",
+        "region_id": 64
+    },
+    {
+        "name": "Ахтубинск",
+        "region_id": 30
+    },
+    {
+        "name": "Ахтубинск-7",
+        "region_id": 30
+    },
+    {
+        "name": "Ачинск",
+        "region_id": 24
+    },
+    {
+        "name": "Аша",
+        "region_id": 74
+    },
+    {
+        "name": "Бабаево",
+        "region_id": 35
+    },
+    {
+        "name": "Бабушкин",
+        "region_id": 3
+    },
+    {
+        "name": "Бавлы",
+        "region_id": 16
+    },
+    {
+        "name": "Багратионовск",
+        "region_id": 39
+    },
+    {
+        "name": "Байкальск",
+        "region_id": 38
+    },
+    {
+        "name": "Баймак",
+        "region_id": 2
+    },
+    {
+        "name": "Бакал",
+        "region_id": 74
+    },
+    {
+        "name": "Баксан",
+        "region_id": 7
+    },
+    {
+        "name": "Балабаново",
+        "region_id": 40
+    },
+    {
+        "name": "Балаково",
+        "region_id": 64
+    },
+    {
+        "name": "Балахна",
+        "region_id": 52
+    },
+    {
+        "name": "Балашиха",
+        "region_id": 50
+    },
+    {
+        "name": "Балашов",
+        "region_id": 64
+    },
+    {
+        "name": "Балей",
+        "region_id": 75
+    },
+    {
+        "name": "Балтийск",
+        "region_id": 39
+    },
+    {
+        "name": "Барабинск",
+        "region_id": 54
+    },
+    {
+        "name": "Барнаул",
+        "region_id": 22
+    },
+    {
+        "name": "Барыш",
+        "region_id": 73
+    },
+    {
+        "name": "Батайск",
+        "region_id": 61
+    },
+    {
+        "name": "Бахчисарай",
+        "region_id": 91
+    },
+    {
+        "name": "Бежецк",
+        "region_id": 69
+    },
+    {
+        "name": "Белая Калитва",
+        "region_id": 61
+    },
+    {
+        "name": "Белая Холуница",
+        "region_id": 43
+    },
+    {
+        "name": "Белгород",
+        "region_id": 31
+    },
+    {
+        "name": "Белебей",
+        "region_id": 2
+    },
+    {
+        "name": "Белев",
+        "region_id": 71
+    },
+    {
+        "name": "Белинский",
+        "region_id": 58
+    },
+    {
+        "name": "Белово",
+        "region_id": 42
+    },
+    {
+        "name": "Белогорск",
+        "region_id": 28
+    },
+    {
+        "name": "Белогорск",
+        "region_id": 91
+    },
+    {
+        "name": "Белозерск",
+        "region_id": 35
+    },
+    {
+        "name": "Белокуриха",
+        "region_id": 22
+    },
+    {
+        "name": "Беломорск",
+        "region_id": 10
+    },
+    {
+        "name": "Белорецк",
+        "region_id": 2
+    },
+    {
+        "name": "Белореченск",
+        "region_id": 23
+    },
+    {
+        "name": "Белоусово",
+        "region_id": 40
+    },
+    {
+        "name": "Белоярский",
+        "region_id": 86
+    },
+    {
+        "name": "Белый",
+        "region_id": 69
+    },
+    {
+        "name": "Бердск",
+        "region_id": 54
+    },
+    {
+        "name": "Березники",
+        "region_id": 59
+    },
+    {
+        "name": "Березовский",
+        "region_id": 42
+    },
+    {
+        "name": "Березовский",
+        "region_id": 66
+    },
+    {
+        "name": "Беслан",
+        "region_id": 15
+    },
+    {
+        "name": "Бийск",
+        "region_id": 22
+    },
+    {
+        "name": "Бикин",
+        "region_id": 27
+    },
+    {
+        "name": "Билибино",
+        "region_id": 87
+    },
+    {
+        "name": "Биробиджан",
+        "region_id": 79
+    },
+    {
+        "name": "Бирск",
+        "region_id": 2
+    },
+    {
+        "name": "Бирюсинск",
+        "region_id": 38
+    },
+    {
+        "name": "Бирюч",
+        "region_id": 31
+    },
+    {
+        "name": "Благовещенск",
+        "region_id": 2
+    },
+    {
+        "name": "Благовещенск",
+        "region_id": 28
+    },
+    {
+        "name": "Благодарный",
+        "region_id": 26
+    },
+    {
+        "name": "Бобров",
+        "region_id": 36
+    },
+    {
+        "name": "Богданович",
+        "region_id": 66
+    },
+    {
+        "name": "Богородицк",
+        "region_id": 71
+    },
+    {
+        "name": "Богородск",
+        "region_id": 52
+    },
+    {
+        "name": "Боготол",
+        "region_id": 24
+    },
+    {
+        "name": "Богучар",
+        "region_id": 36
+    },
+    {
+        "name": "Бодайбо",
+        "region_id": 38
+    },
+    {
+        "name": "Бокситогорск",
+        "region_id": 47
+    },
+    {
+        "name": "Болгар",
+        "region_id": 16
+    },
+    {
+        "name": "Бологое",
+        "region_id": 69
+    },
+    {
+        "name": "Болотное",
+        "region_id": 54
+    },
+    {
+        "name": "Болохово",
+        "region_id": 71
+    },
+    {
+        "name": "Болхов",
+        "region_id": 57
+    },
+    {
+        "name": "Большой Камень",
+        "region_id": 25
+    },
+    {
+        "name": "Бор",
+        "region_id": 52
+    },
+    {
+        "name": "Борзя",
+        "region_id": 75
+    },
+    {
+        "name": "Борисоглебск",
+        "region_id": 36
+    },
+    {
+        "name": "Боровичи",
+        "region_id": 53
+    },
+    {
+        "name": "Боровск",
+        "region_id": 40
+    },
+    {
+        "name": "Боровск-1",
+        "region_id": 40
+    },
+    {
+        "name": "Бородино",
+        "region_id": 24
+    },
+    {
+        "name": "Братск",
+        "region_id": 38
+    },
+    {
+        "name": "Бронницы",
+        "region_id": 50
+    },
+    {
+        "name": "Брянск",
+        "region_id": 32
+    },
+    {
+        "name": "Бугульма",
+        "region_id": 16
+    },
+    {
+        "name": "Бугуруслан",
+        "region_id": 56
+    },
+    {
+        "name": "Буденновск",
+        "region_id": 26
+    },
+    {
+        "name": "Бузулук",
+        "region_id": 56
+    },
+    {
+        "name": "Буинск",
+        "region_id": 16
+    },
+    {
+        "name": "Буй",
+        "region_id": 44
+    },
+    {
+        "name": "Буйнакск",
+        "region_id": 5
+    },
+    {
+        "name": "Бутурлиновка",
+        "region_id": 36
+    },
+    {
+        "name": "Валдай",
+        "region_id": 53
+    },
+    {
+        "name": "Валуйки",
+        "region_id": 31
+    },
+    {
+        "name": "Велиж",
+        "region_id": 67
+    },
+    {
+        "name": "Великие Луки",
+        "region_id": 60
+    },
+    {
+        "name": "Великие Луки-1",
+        "region_id": 60
+    },
+    {
+        "name": "Великий Новгород",
+        "region_id": 53
+    },
+    {
+        "name": "Великий Устюг",
+        "region_id": 35
+    },
+    {
+        "name": "Вельск",
+        "region_id": 29
+    },
+    {
+        "name": "Венев",
+        "region_id": 71
+    },
+    {
+        "name": "Верещагино",
+        "region_id": 59
+    },
+    {
+        "name": "Верея",
+        "region_id": 50
+    },
+    {
+        "name": "Верхнеуральск",
+        "region_id": 74
+    },
+    {
+        "name": "Верхний Тагил",
+        "region_id": 66
+    },
+    {
+        "name": "Верхний Уфалей",
+        "region_id": 74
+    },
+    {
+        "name": "Верхняя Пышма",
+        "region_id": 66
+    },
+    {
+        "name": "Верхняя Салда",
+        "region_id": 66
+    },
+    {
+        "name": "Верхняя Тура",
+        "region_id": 66
+    },
+    {
+        "name": "Верхотурье",
+        "region_id": 66
+    },
+    {
+        "name": "Верхоянск",
+        "region_id": 14
+    },
+    {
+        "name": "Весьегонск",
+        "region_id": 69
+    },
+    {
+        "name": "Ветлуга",
+        "region_id": 52
+    },
+    {
+        "name": "Видное",
+        "region_id": 50
+    },
+    {
+        "name": "Вилюйск",
+        "region_id": 14
+    },
+    {
+        "name": "Вилючинск",
+        "region_id": 41
+    },
+    {
+        "name": "Вихоревка",
+        "region_id": 38
+    },
+    {
+        "name": "Вичуга",
+        "region_id": 37
+    },
+    {
+        "name": "Владивосток",
+        "region_id": 25
+    },
+    {
+        "name": "Владикавказ",
+        "region_id": 15
+    },
+    {
+        "name": "Владимир",
+        "region_id": 33
+    },
+    {
+        "name": "Волгоград",
+        "region_id": 34
+    },
+    {
+        "name": "Волгодонск",
+        "region_id": 61
+    },
+    {
+        "name": "Волгореченск",
+        "region_id": 44
+    },
+    {
+        "name": "Волжск",
+        "region_id": 12
+    },
+    {
+        "name": "Волжский",
+        "region_id": 34
+    },
+    {
+        "name": "Вологда",
+        "region_id": 35
+    },
+    {
+        "name": "Володарск",
+        "region_id": 52
+    },
+    {
+        "name": "Волоколамск",
+        "region_id": 50
+    },
+    {
+        "name": "Волосово",
+        "region_id": 47
+    },
+    {
+        "name": "Волхов",
+        "region_id": 47
+    },
+    {
+        "name": "Волчанск",
+        "region_id": 66
+    },
+    {
+        "name": "Вольск",
+        "region_id": 64
+    },
+    {
+        "name": "Вольск-18",
+        "region_id": 64
+    },
+    {
+        "name": "Воркута",
+        "region_id": 11
+    },
+    {
+        "name": "Воронеж",
+        "region_id": 36
+    },
+    {
+        "name": "Воронеж-45",
+        "region_id": 36
+    },
+    {
+        "name": "Ворсма",
+        "region_id": 52
+    },
+    {
+        "name": "Воскресенск",
+        "region_id": 50
+    },
+    {
+        "name": "Воткинск",
+        "region_id": 18
+    },
+    {
+        "name": "Всеволожск",
+        "region_id": 47
+    },
+    {
+        "name": "Вуктыл",
+        "region_id": 11
+    },
+    {
+        "name": "Выборг",
+        "region_id": 47
+    },
+    {
+        "name": "Выкса",
+        "region_id": 52
+    },
+    {
+        "name": "Высоковск",
+        "region_id": 50
+    },
+    {
+        "name": "Высоцк",
+        "region_id": 47
+    },
+    {
+        "name": "Вытегра",
+        "region_id": 35
+    },
+    {
+        "name": "Вышний Волочек",
+        "region_id": 69
+    },
+    {
+        "name": "Вяземский",
+        "region_id": 27
+    },
+    {
+        "name": "Вязники",
+        "region_id": 33
+    },
+    {
+        "name": "Вязьма",
+        "region_id": 67
+    },
+    {
+        "name": "Вятские Поляны",
+        "region_id": 43
+    },
+    {
+        "name": "Гаврилов Посад",
+        "region_id": 37
+    },
+    {
+        "name": "Гаврилов-Ям",
+        "region_id": 76
+    },
+    {
+        "name": "Гагарин",
+        "region_id": 67
+    },
+    {
+        "name": "Гаджиево",
+        "region_id": 51
+    },
+    {
+        "name": "Гай",
+        "region_id": 56
+    },
+    {
+        "name": "Галич",
+        "region_id": 44
+    },
+    {
+        "name": "Гатчина",
+        "region_id": 47
+    },
+    {
+        "name": "Гвардейск",
+        "region_id": 39
+    },
+    {
+        "name": "Гдов",
+        "region_id": 60
+    },
+    {
+        "name": "Геленджик",
+        "region_id": 23
+    },
+    {
+        "name": "Георгиевск",
+        "region_id": 26
+    },
+    {
+        "name": "Глазов",
+        "region_id": 18
+    },
+    {
+        "name": "Голицыно",
+        "region_id": 50
+    },
+    {
+        "name": "Горбатов",
+        "region_id": 52
+    },
+    {
+        "name": "Горно-Алтайск",
+        "region_id": 4
+    },
+    {
+        "name": "Горнозаводск",
+        "region_id": 59
+    },
+    {
+        "name": "Горняк",
+        "region_id": 22
+    },
+    {
+        "name": "Городец",
+        "region_id": 52
+    },
+    {
+        "name": "Городище",
+        "region_id": 58
+    },
+    {
+        "name": "Городовиковск",
+        "region_id": 8
+    },
+    {
+        "name": "Городской округ Черноголовка",
+        "region_id": 50
+    },
+    {
+        "name": "Гороховец",
+        "region_id": 33
+    },
+    {
+        "name": "Горячий Ключ",
+        "region_id": 23
+    },
+    {
+        "name": "Грайворон",
+        "region_id": 31
+    },
+    {
+        "name": "Гремячинск",
+        "region_id": 59
+    },
+    {
+        "name": "Грозный",
+        "region_id": 20
+    },
+    {
+        "name": "Грязи",
+        "region_id": 48
+    },
+    {
+        "name": "Грязовец",
+        "region_id": 35
+    },
+    {
+        "name": "Губаха",
+        "region_id": 59
+    },
+    {
+        "name": "Губкин",
+        "region_id": 31
+    },
+    {
+        "name": "Губкинский",
+        "region_id": 89
+    },
+    {
+        "name": "Гудермес",
+        "region_id": 20
+    },
+    {
+        "name": "Гуково",
+        "region_id": 61
+    },
+    {
+        "name": "Гулькевичи",
+        "region_id": 23
+    },
+    {
+        "name": "Гурьевск",
+        "region_id": 39
+    },
+    {
+        "name": "Гурьевск",
+        "region_id": 42
+    },
+    {
+        "name": "Гусев",
+        "region_id": 39
+    },
+    {
+        "name": "Гусиноозерск",
+        "region_id": 3
+    },
+    {
+        "name": "Гусь-Хрустальный",
+        "region_id": 33
+    },
+    {
+        "name": "Давлеканово",
+        "region_id": 2
+    },
+    {
+        "name": "Дагестанские Огни",
+        "region_id": 5
+    },
+    {
+        "name": "Далматово",
+        "region_id": 45
+    },
+    {
+        "name": "Дальнегорск",
+        "region_id": 25
+    },
+    {
+        "name": "Дальнереченск",
+        "region_id": 25
+    },
+    {
+        "name": "Данилов",
+        "region_id": 76
+    },
+    {
+        "name": "Данков",
+        "region_id": 48
+    },
+    {
+        "name": "Дегтярск",
+        "region_id": 66
+    },
+    {
+        "name": "Дедовск",
+        "region_id": 50
+    },
+    {
+        "name": "Демидов",
+        "region_id": 67
+    },
+    {
+        "name": "Дербент",
+        "region_id": 5
+    },
+    {
+        "name": "Десногорск",
+        "region_id": 67
+    },
+    {
+        "name": "Джанкой",
+        "region_id": 91
+    },
+    {
+        "name": "Джанкой",
+        "region_id": 91
+    },
+    {
+        "name": "Дзержинск",
+        "region_id": 52
+    },
+    {
+        "name": "Дзержинский",
+        "region_id": 50
+    },
+    {
+        "name": "Дивногорск",
+        "region_id": 24
+    },
+    {
+        "name": "Дигора",
+        "region_id": 15
+    },
+    {
+        "name": "Димитровград",
+        "region_id": 73
+    },
+    {
+        "name": "Дмитриев",
+        "region_id": 46
+    },
+    {
+        "name": "Дмитров",
+        "region_id": 50
+    },
+    {
+        "name": "Дмитровск",
+        "region_id": 57
+    },
+    {
+        "name": "Дно",
+        "region_id": 60
+    },
+    {
+        "name": "Добрянка",
+        "region_id": 59
+    },
+    {
+        "name": "Долгопрудный",
+        "region_id": 50
+    },
+    {
+        "name": "Долинск",
+        "region_id": 65
+    },
+    {
+        "name": "Домодедово",
+        "region_id": 50
+    },
+    {
+        "name": "Донецк",
+        "region_id": 61
+    },
+    {
+        "name": "Донской",
+        "region_id": 71
+    },
+    {
+        "name": "Дорогобуж",
+        "region_id": 67
+    },
+    {
+        "name": "Дрезна",
+        "region_id": 50
+    },
+    {
+        "name": "Дубна",
+        "region_id": 50
+    },
+    {
+        "name": "Дубовка",
+        "region_id": 34
+    },
+    {
+        "name": "Дудинка",
+        "region_id": 24
+    },
+    {
+        "name": "Духовщина",
+        "region_id": 67
+    },
+    {
+        "name": "Дюртюли",
+        "region_id": 2
+    },
+    {
+        "name": "Дятьково",
+        "region_id": 32
+    },
+    {
+        "name": "Евпатория",
+        "region_id": 91
+    },
+    {
+        "name": "Егорьевск",
+        "region_id": 50
+    },
+    {
+        "name": "Ейск",
+        "region_id": 23
+    },
+    {
+        "name": "Екатеринбург",
+        "region_id": 66
+    },
+    {
+        "name": "Елабуга",
+        "region_id": 16
+    },
+    {
+        "name": "Елец",
+        "region_id": 48
+    },
+    {
+        "name": "Елизово",
+        "region_id": 41
+    },
+    {
+        "name": "Ельня",
+        "region_id": 67
+    },
+    {
+        "name": "Еманжелинск",
+        "region_id": 74
+    },
+    {
+        "name": "Емва",
+        "region_id": 11
+    },
+    {
+        "name": "Енисейск",
+        "region_id": 24
+    },
+    {
+        "name": "Ермолино",
+        "region_id": 40
+    },
+    {
+        "name": "Ершов",
+        "region_id": 64
+    },
+    {
+        "name": "Ессентуки",
+        "region_id": 26
+    },
+    {
+        "name": "Ефремов",
+        "region_id": 71
+    },
+    {
+        "name": "Железноводск",
+        "region_id": 26
+    },
+    {
+        "name": "Железногорск",
+        "region_id": 24
+    },
+    {
+        "name": "Железногорск",
+        "region_id": 46
+    },
+    {
+        "name": "Железногорск-Илимский",
+        "region_id": 38
+    },
+    {
+        "name": "Железнодорожный",
+        "region_id": 50
+    },
+    {
+        "name": "Жердевка",
+        "region_id": 68
+    },
+    {
+        "name": "Жигулевск",
+        "region_id": 63
+    },
+    {
+        "name": "Жиздра",
+        "region_id": 40
+    },
+    {
+        "name": "Жирновск",
+        "region_id": 34
+    },
+    {
+        "name": "Жуков",
+        "region_id": 40
+    },
+    {
+        "name": "Жуковка",
+        "region_id": 32
+    },
+    {
+        "name": "Жуковский",
+        "region_id": 50
+    },
+    {
+        "name": "Завитинск",
+        "region_id": 28
+    },
+    {
+        "name": "Заводоуковск",
+        "region_id": 72
+    },
+    {
+        "name": "Заволжск",
+        "region_id": 37
+    },
+    {
+        "name": "Заволжье",
+        "region_id": 52
+    },
+    {
+        "name": "Задонск",
+        "region_id": 48
+    },
+    {
+        "name": "Заинск",
+        "region_id": 16
+    },
+    {
+        "name": "Закаменск",
+        "region_id": 3
+    },
+    {
+        "name": "Заозерный",
+        "region_id": 24
+    },
+    {
+        "name": "Заозерск",
+        "region_id": 51
+    },
+    {
+        "name": "Западная Двина",
+        "region_id": 69
+    },
+    {
+        "name": "Заполярный",
+        "region_id": 51
+    },
+    {
+        "name": "Зарайск",
+        "region_id": 50
+    },
+    {
+        "name": "Заречный",
+        "region_id": 58
+    },
+    {
+        "name": "Заречный",
+        "region_id": 66
+    },
+    {
+        "name": "Заринск",
+        "region_id": 22
+    },
+    {
+        "name": "Звенигово",
+        "region_id": 12
+    },
+    {
+        "name": "Звенигород",
+        "region_id": 50
+    },
+    {
+        "name": "Зверево",
+        "region_id": 61
+    },
+    {
+        "name": "Зеленогорск",
+        "region_id": 24
+    },
+    {
+        "name": "Зеленогорск",
+        "region_id": 78
+    },
+    {
+        "name": "Зеленоград",
+        "region_id": 77
+    },
+    {
+        "name": "Зеленоградск",
+        "region_id": 39
+    },
+    {
+        "name": "Зеленодольск",
+        "region_id": 16
+    },
+    {
+        "name": "Зеленокумск",
+        "region_id": 26
+    },
+    {
+        "name": "Зерноград",
+        "region_id": 61
+    },
+    {
+        "name": "Зея",
+        "region_id": 28
+    },
+    {
+        "name": "Зима",
+        "region_id": 38
+    },
+    {
+        "name": "Златоуст",
+        "region_id": 74
+    },
+    {
+        "name": "Злынка",
+        "region_id": 32
+    },
+    {
+        "name": "Змеиногорск",
+        "region_id": 22
+    },
+    {
+        "name": "Знаменск",
+        "region_id": 30
+    },
+    {
+        "name": "Зубцов",
+        "region_id": 69
+    },
+    {
+        "name": "Зуевка",
+        "region_id": 43
+    },
+    {
+        "name": "Ивангород",
+        "region_id": 47
+    },
+    {
+        "name": "Иваново",
+        "region_id": 37
+    },
+    {
+        "name": "Ивантеевка",
+        "region_id": 50
+    },
+    {
+        "name": "Ивдель",
+        "region_id": 66
+    },
+    {
+        "name": "Игарка",
+        "region_id": 24
+    },
+    {
+        "name": "Ижевск",
+        "region_id": 18
+    },
+    {
+        "name": "Избербаш",
+        "region_id": 5
+    },
+    {
+        "name": "Изобильный",
+        "region_id": 26
+    },
+    {
+        "name": "Иланский",
+        "region_id": 24
+    },
+    {
+        "name": "Инза",
+        "region_id": 73
+    },
+    {
+        "name": "Инкерман",
+        "region_id": 92
+    },
+    {
+        "name": "Инсар",
+        "region_id": 13
+    },
+    {
+        "name": "Инта",
+        "region_id": 11
+    },
+    {
+        "name": "Ипатово",
+        "region_id": 26
+    },
+    {
+        "name": "Ирбит",
+        "region_id": 66
+    },
+    {
+        "name": "Иркутск",
+        "region_id": 38
+    },
+    {
+        "name": "Иркутск-45",
+        "region_id": 38
+    },
+    {
+        "name": "Исилькуль",
+        "region_id": 55
+    },
+    {
+        "name": "Искитим",
+        "region_id": 54
+    },
+    {
+        "name": "Истра",
+        "region_id": 50
+    },
+    {
+        "name": "Истра-1",
+        "region_id": 50
+    },
+    {
+        "name": "Ишим",
+        "region_id": 72
+    },
+    {
+        "name": "Ишимбай",
+        "region_id": 2
+    },
+    {
+        "name": "Йошкар-Ола",
+        "region_id": 12
+    },
+    {
+        "name": "Кадников",
+        "region_id": 35
+    },
+    {
+        "name": "Казань",
+        "region_id": 16
+    },
+    {
+        "name": "Калач",
+        "region_id": 36
+    },
+    {
+        "name": "Калачинск",
+        "region_id": 55
+    },
+    {
+        "name": "Калач-на-Дону",
+        "region_id": 34
+    },
+    {
+        "name": "Калининград",
+        "region_id": 39
+    },
+    {
+        "name": "Калининск",
+        "region_id": 64
+    },
+    {
+        "name": "Калтан",
+        "region_id": 42
+    },
+    {
+        "name": "Калуга",
+        "region_id": 40
+    },
+    {
+        "name": "Калязин",
+        "region_id": 69
+    },
+    {
+        "name": "Камбарка",
+        "region_id": 18
+    },
+    {
+        "name": "Каменка",
+        "region_id": 58
+    },
+    {
+        "name": "Каменногорск",
+        "region_id": 47
+    },
+    {
+        "name": "Каменск-Уральский",
+        "region_id": 66
+    },
+    {
+        "name": "Каменск-Шахтинский",
+        "region_id": 61
+    },
+    {
+        "name": "Камень-на-Оби",
+        "region_id": 22
+    },
+    {
+        "name": "Камешково",
+        "region_id": 33
+    },
+    {
+        "name": "Камызяк",
+        "region_id": 30
+    },
+    {
+        "name": "Камышин",
+        "region_id": 34
+    },
+    {
+        "name": "Камышлов",
+        "region_id": 66
+    },
+    {
+        "name": "Канаш",
+        "region_id": 21
+    },
+    {
+        "name": "Кандалакша",
+        "region_id": 51
+    },
+    {
+        "name": "Канск",
+        "region_id": 24
+    },
+    {
+        "name": "Карабаново",
+        "region_id": 33
+    },
+    {
+        "name": "Карабаш",
+        "region_id": 74
+    },
+    {
+        "name": "Карабулак",
+        "region_id": 6
+    },
+    {
+        "name": "Карасук",
+        "region_id": 54
+    },
+    {
+        "name": "Карачаевск",
+        "region_id": 9
+    },
+    {
+        "name": "Карачев",
+        "region_id": 32
+    },
+    {
+        "name": "Каргат",
+        "region_id": 54
+    },
+    {
+        "name": "Каргополь",
+        "region_id": 29
+    },
+    {
+        "name": "Карпинск",
+        "region_id": 66
+    },
+    {
+        "name": "Карталы",
+        "region_id": 74
+    },
+    {
+        "name": "Касимов",
+        "region_id": 62
+    },
+    {
+        "name": "Касли",
+        "region_id": 74
+    },
+    {
+        "name": "Каспийск",
+        "region_id": 5
+    },
+    {
+        "name": "Катав-Ивановск",
+        "region_id": 74
+    },
+    {
+        "name": "Катайск",
+        "region_id": 45
+    },
+    {
+        "name": "Качканар",
+        "region_id": 66
+    },
+    {
+        "name": "Кашин",
+        "region_id": 69
+    },
+    {
+        "name": "Кашира",
+        "region_id": 50
+    },
+    {
+        "name": "Кашира-8",
+        "region_id": 50
+    },
+    {
+        "name": "Кедровый",
+        "region_id": 70
+    },
+    {
+        "name": "Кемерово",
+        "region_id": 42
+    },
+    {
+        "name": "Кемь",
+        "region_id": 10
+    },
+    {
+        "name": "Керчь",
+        "region_id": 91
+    },
+    {
+        "name": "Кизел",
+        "region_id": 59
+    },
+    {
+        "name": "Кизилюрт",
+        "region_id": 5
+    },
+    {
+        "name": "Кизляр",
+        "region_id": 5
+    },
+    {
+        "name": "Кимовск",
+        "region_id": 71
+    },
+    {
+        "name": "Кимры",
+        "region_id": 69
+    },
+    {
+        "name": "Кингисепп",
+        "region_id": 47
+    },
+    {
+        "name": "Кинель",
+        "region_id": 63
+    },
+    {
+        "name": "Кинешма",
+        "region_id": 37
+    },
+    {
+        "name": "Киреевск",
+        "region_id": 71
+    },
+    {
+        "name": "Киренск",
+        "region_id": 38
+    },
+    {
+        "name": "Киржач",
+        "region_id": 33
+    },
+    {
+        "name": "Кириллов",
+        "region_id": 35
+    },
+    {
+        "name": "Кириши",
+        "region_id": 47
+    },
+    {
+        "name": "Киров",
+        "region_id": 40
+    },
+    {
+        "name": "Киров",
+        "region_id": 43
+    },
+    {
+        "name": "Кировград",
+        "region_id": 66
+    },
+    {
+        "name": "Кирово-Чепецк",
+        "region_id": 43
+    },
+    {
+        "name": "Кировск",
+        "region_id": 47
+    },
+    {
+        "name": "Кировск",
+        "region_id": 51
+    },
+    {
+        "name": "Кирс",
+        "region_id": 43
+    },
+    {
+        "name": "Кирсанов",
+        "region_id": 68
+    },
+    {
+        "name": "Киселевск",
+        "region_id": 42
+    },
+    {
+        "name": "Кисловодск",
+        "region_id": 26
+    },
+    {
+        "name": "Климовск",
+        "region_id": 50
+    },
+    {
+        "name": "Клин",
+        "region_id": 50
+    },
+    {
+        "name": "Клинцы",
+        "region_id": 32
+    },
+    {
+        "name": "Княгинино",
+        "region_id": 52
+    },
+    {
+        "name": "Ковдор",
+        "region_id": 51
+    },
+    {
+        "name": "Ковров",
+        "region_id": 33
+    },
+    {
+        "name": "Ковылкино",
+        "region_id": 13
+    },
+    {
+        "name": "Когалым",
+        "region_id": 86
+    },
+    {
+        "name": "Кодинск",
+        "region_id": 24
+    },
+    {
+        "name": "Козельск",
+        "region_id": 40
+    },
+    {
+        "name": "Козловка",
+        "region_id": 21
+    },
+    {
+        "name": "Козьмодемьянск",
+        "region_id": 12
+    },
+    {
+        "name": "Кола",
+        "region_id": 51
+    },
+    {
+        "name": "Кологрив",
+        "region_id": 44
+    },
+    {
+        "name": "Коломна",
+        "region_id": 50
+    },
+    {
+        "name": "Колпашево",
+        "region_id": 70
+    },
+    {
+        "name": "Колпино",
+        "region_id": 78
+    },
+    {
+        "name": "Кольчугино",
+        "region_id": 33
+    },
+    {
+        "name": "Коммунар",
+        "region_id": 47
+    },
+    {
+        "name": "Комсомольск",
+        "region_id": 37
+    },
+    {
+        "name": "Комсомольск-на-Амуре",
+        "region_id": 27
+    },
+    {
+        "name": "Конаково",
+        "region_id": 69
+    },
+    {
+        "name": "Кондопога",
+        "region_id": 10
+    },
+    {
+        "name": "Кондрово",
+        "region_id": 40
+    },
+    {
+        "name": "Константиновск",
+        "region_id": 61
+    },
+    {
+        "name": "Копейск",
+        "region_id": 74
+    },
+    {
+        "name": "Кораблино",
+        "region_id": 62
+    },
+    {
+        "name": "Кореновск",
+        "region_id": 23
+    },
+    {
+        "name": "Коркино",
+        "region_id": 74
+    },
+    {
+        "name": "Королев",
+        "region_id": 50
+    },
+    {
+        "name": "Короча",
+        "region_id": 31
+    },
+    {
+        "name": "Корсаков",
+        "region_id": 65
+    },
+    {
+        "name": "Коряжма",
+        "region_id": 29
+    },
+    {
+        "name": "Костерево",
+        "region_id": 33
+    },
+    {
+        "name": "Костомукша",
+        "region_id": 10
+    },
+    {
+        "name": "Кострома",
+        "region_id": 44
+    },
+    {
+        "name": "Котельники",
+        "region_id": 50
+    },
+    {
+        "name": "Котельниково",
+        "region_id": 34
+    },
+    {
+        "name": "Котельнич",
+        "region_id": 43
+    },
+    {
+        "name": "Котлас",
+        "region_id": 29
+    },
+    {
+        "name": "Котово",
+        "region_id": 34
+    },
+    {
+        "name": "Котовск",
+        "region_id": 68
+    },
+    {
+        "name": "Кохма",
+        "region_id": 37
+    },
+    {
+        "name": "Красавино",
+        "region_id": 35
+    },
+    {
+        "name": "Красноармейск",
+        "region_id": 50
+    },
+    {
+        "name": "Красноармейск",
+        "region_id": 64
+    },
+    {
+        "name": "Красновишерск",
+        "region_id": 59
+    },
+    {
+        "name": "Красногорск",
+        "region_id": 50
+    },
+    {
+        "name": "Краснодар",
+        "region_id": 23
+    },
+    {
+        "name": "Красное Село",
+        "region_id": 78
+    },
+    {
+        "name": "Краснозаводск",
+        "region_id": 50
+    },
+    {
+        "name": "Краснознаменск",
+        "region_id": 39
+    },
+    {
+        "name": "Краснознаменск",
+        "region_id": 50
+    },
+    {
+        "name": "Краснокаменск",
+        "region_id": 75
+    },
+    {
+        "name": "Краснокамск",
+        "region_id": 59
+    },
+    {
+        "name": "Красноперекопск",
+        "region_id": 91
+    },
+    {
+        "name": "Красноперекопск",
+        "region_id": 91
+    },
+    {
+        "name": "Краснослободск",
+        "region_id": 13
+    },
+    {
+        "name": "Краснослободск",
+        "region_id": 34
+    },
+    {
+        "name": "Краснотурьинск",
+        "region_id": 66
+    },
+    {
+        "name": "Красноуральск",
+        "region_id": 66
+    },
+    {
+        "name": "Красноуфимск",
+        "region_id": 66
+    },
+    {
+        "name": "Красноярск",
+        "region_id": 24
+    },
+    {
+        "name": "Красный Кут",
+        "region_id": 64
+    },
+    {
+        "name": "Красный Сулин",
+        "region_id": 61
+    },
+    {
+        "name": "Красный Холм",
+        "region_id": 69
+    },
+    {
+        "name": "Кременки",
+        "region_id": 40
+    },
+    {
+        "name": "Кронштадт",
+        "region_id": 78
+    },
+    {
+        "name": "Кропоткин",
+        "region_id": 23
+    },
+    {
+        "name": "Крымск",
+        "region_id": 23
+    },
+    {
+        "name": "Кстово",
+        "region_id": 52
+    },
+    {
+        "name": "Кубинка",
+        "region_id": 50
+    },
+    {
+        "name": "Кувандык",
+        "region_id": 56
+    },
+    {
+        "name": "Кувшиново",
+        "region_id": 69
+    },
+    {
+        "name": "Кудымкар",
+        "region_id": 59
+    },
+    {
+        "name": "Кузнецк",
+        "region_id": 58
+    },
+    {
+        "name": "Кузнецк-12",
+        "region_id": 58
+    },
+    {
+        "name": "Кузнецк-8",
+        "region_id": 58
+    },
+    {
+        "name": "Куйбышев",
+        "region_id": 54
+    },
+    {
+        "name": "Кулебаки",
+        "region_id": 52
+    },
+    {
+        "name": "Кумертау",
+        "region_id": 2
+    },
+    {
+        "name": "Кунгур",
+        "region_id": 59
+    },
+    {
+        "name": "Купино",
+        "region_id": 54
+    },
+    {
+        "name": "Курган",
+        "region_id": 45
+    },
+    {
+        "name": "Курганинск",
+        "region_id": 23
+    },
+    {
+        "name": "Курильск",
+        "region_id": 65
+    },
+    {
+        "name": "Курлово",
+        "region_id": 33
+    },
+    {
+        "name": "Куровское",
+        "region_id": 50
+    },
+    {
+        "name": "Курск",
+        "region_id": 46
+    },
+    {
+        "name": "Куртамыш",
+        "region_id": 45
+    },
+    {
+        "name": "Курчатов",
+        "region_id": 46
+    },
+    {
+        "name": "Куса",
+        "region_id": 74
+    },
+    {
+        "name": "Кушва",
+        "region_id": 66
+    },
+    {
+        "name": "Кызыл",
+        "region_id": 17
+    },
+    {
+        "name": "Кыштым",
+        "region_id": 74
+    },
+    {
+        "name": "Кяхта",
+        "region_id": 3
+    },
+    {
+        "name": "Лабинск",
+        "region_id": 23
+    },
+    {
+        "name": "Лабытнанги",
+        "region_id": 89
+    },
+    {
+        "name": "Лагань",
+        "region_id": 8
+    },
+    {
+        "name": "Ладушкин",
+        "region_id": 39
+    },
+    {
+        "name": "Лаишево",
+        "region_id": 16
+    },
+    {
+        "name": "Лакинск",
+        "region_id": 33
+    },
+    {
+        "name": "Лангепас",
+        "region_id": 86
+    },
+    {
+        "name": "Лахденпохья",
+        "region_id": 10
+    },
+    {
+        "name": "Лебедянь",
+        "region_id": 48
+    },
+    {
+        "name": "Лениногорск",
+        "region_id": 16
+    },
+    {
+        "name": "Ленинск",
+        "region_id": 34
+    },
+    {
+        "name": "Ленинск-Кузнецкий",
+        "region_id": 42
+    },
+    {
+        "name": "Ленск",
+        "region_id": 14
+    },
+    {
+        "name": "Лермонтов",
+        "region_id": 26
+    },
+    {
+        "name": "Лесной",
+        "region_id": 66
+    },
+    {
+        "name": "Лесозаводск",
+        "region_id": 25
+    },
+    {
+        "name": "Лесосибирск",
+        "region_id": 24
+    },
+    {
+        "name": "Ливны",
+        "region_id": 57
+    },
+    {
+        "name": "Ликино-Дулево",
+        "region_id": 50
+    },
+    {
+        "name": "Липецк",
+        "region_id": 48
+    },
+    {
+        "name": "Липки",
+        "region_id": 71
+    },
+    {
+        "name": "Лиски",
+        "region_id": 36
+    },
+    {
+        "name": "Лихославль",
+        "region_id": 69
+    },
+    {
+        "name": "Лобня",
+        "region_id": 50
+    },
+    {
+        "name": "Лодейное Поле",
+        "region_id": 47
+    },
+    {
+        "name": "Ломоносов",
+        "region_id": 78
+    },
+    {
+        "name": "Лосино-Петровский",
+        "region_id": 50
+    },
+    {
+        "name": "Луга",
+        "region_id": 47
+    },
+    {
+        "name": "Луза",
+        "region_id": 43
+    },
+    {
+        "name": "Лукоянов",
+        "region_id": 52
+    },
+    {
+        "name": "Луховицы",
+        "region_id": 50
+    },
+    {
+        "name": "Лысково",
+        "region_id": 52
+    },
+    {
+        "name": "Лысьва",
+        "region_id": 59
+    },
+    {
+        "name": "Лыткарино",
+        "region_id": 50
+    },
+    {
+        "name": "Льгов",
+        "region_id": 46
+    },
+    {
+        "name": "Любань",
+        "region_id": 47
+    },
+    {
+        "name": "Люберцы",
+        "region_id": 50
+    },
+    {
+        "name": "Любим",
+        "region_id": 76
+    },
+    {
+        "name": "Людиново",
+        "region_id": 40
+    },
+    {
+        "name": "Лянтор",
+        "region_id": 86
+    },
+    {
+        "name": "Магадан",
+        "region_id": 49
+    },
+    {
+        "name": "Магас",
+        "region_id": 6
+    },
+    {
+        "name": "Магнитогорск",
+        "region_id": 74
+    },
+    {
+        "name": "Майкоп",
+        "region_id": 1
+    },
+    {
+        "name": "Майский",
+        "region_id": 7
+    },
+    {
+        "name": "Макаров",
+        "region_id": 65
+    },
+    {
+        "name": "Макарьев",
+        "region_id": 44
+    },
+    {
+        "name": "Макушино",
+        "region_id": 45
+    },
+    {
+        "name": "Малая Вишера",
+        "region_id": 53
+    },
+    {
+        "name": "Малгобек",
+        "region_id": 6
+    },
+    {
+        "name": "Малмыж",
+        "region_id": 43
+    },
+    {
+        "name": "Малоархангельск",
+        "region_id": 57
+    },
+    {
+        "name": "Малоярославец",
+        "region_id": 40
+    },
+    {
+        "name": "Мамадыш",
+        "region_id": 16
+    },
+    {
+        "name": "Мамоново",
+        "region_id": 39
+    },
+    {
+        "name": "Мантурово",
+        "region_id": 44
+    },
+    {
+        "name": "Мариинск",
+        "region_id": 42
+    },
+    {
+        "name": "Мариинский Посад",
+        "region_id": 21
+    },
+    {
+        "name": "Маркс",
+        "region_id": 64
+    },
+    {
+        "name": "Махачкала",
+        "region_id": 5
+    },
+    {
+        "name": "Мглин",
+        "region_id": 32
+    },
+    {
+        "name": "Мегион",
+        "region_id": 86
+    },
+    {
+        "name": "Медвежьегорск",
+        "region_id": 10
+    },
+    {
+        "name": "Медногорск",
+        "region_id": 56
+    },
+    {
+        "name": "Медынь",
+        "region_id": 40
+    },
+    {
+        "name": "Межгорье",
+        "region_id": 2
+    },
+    {
+        "name": "Междуреченск",
+        "region_id": 42
+    },
+    {
+        "name": "Мезень",
+        "region_id": 29
+    },
+    {
+        "name": "Меленки",
+        "region_id": 33
+    },
+    {
+        "name": "Мелеуз",
+        "region_id": 2
+    },
+    {
+        "name": "Менделеевск",
+        "region_id": 16
+    },
+    {
+        "name": "Мензелинск",
+        "region_id": 16
+    },
+    {
+        "name": "Мещовск",
+        "region_id": 40
+    },
+    {
+        "name": "Миасс",
+        "region_id": 74
+    },
+    {
+        "name": "Микунь",
+        "region_id": 11
+    },
+    {
+        "name": "Миллерово",
+        "region_id": 61
+    },
+    {
+        "name": "Минеральные Воды",
+        "region_id": 26
+    },
+    {
+        "name": "Минусинск",
+        "region_id": 24
+    },
+    {
+        "name": "Миньяр",
+        "region_id": 74
+    },
+    {
+        "name": "Мирный",
+        "region_id": 14
+    },
+    {
+        "name": "Мирный",
+        "region_id": 29
+    },
+    {
+        "name": "Михайлов",
+        "region_id": 62
+    },
+    {
+        "name": "Михайловка",
+        "region_id": 34
+    },
+    {
+        "name": "Михайловск",
+        "region_id": 26
+    },
+    {
+        "name": "Михайловск",
+        "region_id": 66
+    },
+    {
+        "name": "Мичуринск",
+        "region_id": 68
+    },
+    {
+        "name": "Могоча",
+        "region_id": 75
+    },
+    {
+        "name": "Можайск",
+        "region_id": 50
+    },
+    {
+        "name": "Можга",
+        "region_id": 18
+    },
+    {
+        "name": "Моздок",
+        "region_id": 15
+    },
+    {
+        "name": "Мончегорск",
+        "region_id": 51
+    },
+    {
+        "name": "Морозовск",
+        "region_id": 61
+    },
+    {
+        "name": "Моршанск",
+        "region_id": 68
+    },
+    {
+        "name": "Мосальск",
+        "region_id": 40
+    },
+    {
+        "name": "Москва",
+        "region_id": 77
+    },
+    {
+        "name": "Московский",
+        "region_id": 77
+    },
+    {
+        "name": "Московский",
+        "region_id": 77
+    },
+    {
+        "name": "Муравленко",
+        "region_id": 89
+    },
+    {
+        "name": "Мураши",
+        "region_id": 43
+    },
+    {
+        "name": "Мурманск",
+        "region_id": 51
+    },
+    {
+        "name": "Муром",
+        "region_id": 33
+    },
+    {
+        "name": "Мценск",
+        "region_id": 57
+    },
+    {
+        "name": "Мыски",
+        "region_id": 42
+    },
+    {
+        "name": "Мытищи",
+        "region_id": 50
+    },
+    {
+        "name": "Мышкин",
+        "region_id": 76
+    },
+    {
+        "name": "Набережные Челны",
+        "region_id": 16
+    },
+    {
+        "name": "Навашино",
+        "region_id": 52
+    },
+    {
+        "name": "Наволоки",
+        "region_id": 37
+    },
+    {
+        "name": "Надым",
+        "region_id": 89
+    },
+    {
+        "name": "Назарово",
+        "region_id": 24
+    },
+    {
+        "name": "Назрань",
+        "region_id": 6
+    },
+    {
+        "name": "Называевск",
+        "region_id": 55
+    },
+    {
+        "name": "Нальчик",
+        "region_id": 7
+    },
+    {
+        "name": "Нариманов",
+        "region_id": 30
+    },
+    {
+        "name": "Наро-Фоминск",
+        "region_id": 50
+    },
+    {
+        "name": "Нарткала",
+        "region_id": 7
+    },
+    {
+        "name": "Нарьян-Мар",
+        "region_id": 83
+    },
+    {
+        "name": "Находка",
+        "region_id": 25
+    },
+    {
+        "name": "Невель",
+        "region_id": 60
+    },
+    {
+        "name": "Невельск",
+        "region_id": 65
+    },
+    {
+        "name": "Невинномысск",
+        "region_id": 26
+    },
+    {
+        "name": "Невьянск",
+        "region_id": 66
+    },
+    {
+        "name": "Нелидово",
+        "region_id": 69
+    },
+    {
+        "name": "Неман",
+        "region_id": 39
+    },
+    {
+        "name": "Нерехта",
+        "region_id": 44
+    },
+    {
+        "name": "Нерчинск",
+        "region_id": 75
+    },
+    {
+        "name": "Нерюнгри",
+        "region_id": 14
+    },
+    {
+        "name": "Нестеров",
+        "region_id": 39
+    },
+    {
+        "name": "Нефтегорск",
+        "region_id": 63
+    },
+    {
+        "name": "Нефтекамск",
+        "region_id": 2
+    },
+    {
+        "name": "Нефтекумск",
+        "region_id": 26
+    },
+    {
+        "name": "Нефтеюганск",
+        "region_id": 86
+    },
+    {
+        "name": "Нея",
+        "region_id": 44
+    },
+    {
+        "name": "Нижневартовск",
+        "region_id": 86
+    },
+    {
+        "name": "Нижнекамск",
+        "region_id": 16
+    },
+    {
+        "name": "Нижнеудинск",
+        "region_id": 38
+    },
+    {
+        "name": "Нижние Серги",
+        "region_id": 66
+    },
+    {
+        "name": "Нижние Серги-3",
+        "region_id": 66
+    },
+    {
+        "name": "Нижний Ломов",
+        "region_id": 58
+    },
+    {
+        "name": "Нижний Новгород",
+        "region_id": 52
+    },
+    {
+        "name": "Нижний Тагил",
+        "region_id": 66
+    },
+    {
+        "name": "Нижняя Салда",
+        "region_id": 66
+    },
+    {
+        "name": "Нижняя Тура",
+        "region_id": 66
+    },
+    {
+        "name": "Николаевск",
+        "region_id": 34
+    },
+    {
+        "name": "Николаевск-на-Амуре",
+        "region_id": 27
+    },
+    {
+        "name": "Никольск",
+        "region_id": 35
+    },
+    {
+        "name": "Никольск",
+        "region_id": 58
+    },
+    {
+        "name": "Никольское",
+        "region_id": 47
+    },
+    {
+        "name": "Новая Ладога",
+        "region_id": 47
+    },
+    {
+        "name": "Новая Ляля",
+        "region_id": 66
+    },
+    {
+        "name": "Новоалександровск",
+        "region_id": 26
+    },
+    {
+        "name": "Новоалтайск",
+        "region_id": 22
+    },
+    {
+        "name": "Новоаннинский",
+        "region_id": 34
+    },
+    {
+        "name": "Нововоронеж",
+        "region_id": 36
+    },
+    {
+        "name": "Новодвинск",
+        "region_id": 29
+    },
+    {
+        "name": "Новозыбков",
+        "region_id": 32
+    },
+    {
+        "name": "Новокубанск",
+        "region_id": 23
+    },
+    {
+        "name": "Новокузнецк",
+        "region_id": 42
+    },
+    {
+        "name": "Новокуйбышевск",
+        "region_id": 63
+    },
+    {
+        "name": "Новомичуринск",
+        "region_id": 62
+    },
+    {
+        "name": "Новомосковск",
+        "region_id": 71
+    },
+    {
+        "name": "Новопавловск",
+        "region_id": 26
+    },
+    {
+        "name": "Новоржев",
+        "region_id": 60
+    },
+    {
+        "name": "Новороссийск",
+        "region_id": 23
+    },
+    {
+        "name": "Новосибирск",
+        "region_id": 54
+    },
+    {
+        "name": "Новосиль",
+        "region_id": 57
+    },
+    {
+        "name": "Новосокольники",
+        "region_id": 60
+    },
+    {
+        "name": "Новотроицк",
+        "region_id": 56
+    },
+    {
+        "name": "Новоузенск",
+        "region_id": 64
+    },
+    {
+        "name": "Новоульяновск",
+        "region_id": 73
+    },
+    {
+        "name": "Новоуральск",
+        "region_id": 66
+    },
+    {
+        "name": "Новохоперск",
+        "region_id": 36
+    },
+    {
+        "name": "Новочебоксарск",
+        "region_id": 21
+    },
+    {
+        "name": "Новочеркасск",
+        "region_id": 61
+    },
+    {
+        "name": "Новошахтинск",
+        "region_id": 61
+    },
+    {
+        "name": "Новый Оскол",
+        "region_id": 31
+    },
+    {
+        "name": "Новый Уренгой",
+        "region_id": 89
+    },
+    {
+        "name": "Ногинск",
+        "region_id": 50
+    },
+    {
+        "name": "Нолинск",
+        "region_id": 43
+    },
+    {
+        "name": "Норильск",
+        "region_id": 24
+    },
+    {
+        "name": "Ноябрьск",
+        "region_id": 89
+    },
+    {
+        "name": "Нурлат",
+        "region_id": 16
+    },
+    {
+        "name": "Нытва",
+        "region_id": 59
+    },
+    {
+        "name": "Нюрба",
+        "region_id": 14
+    },
+    {
+        "name": "Нягань",
+        "region_id": 86
+    },
+    {
+        "name": "Нязепетровск",
+        "region_id": 74
+    },
+    {
+        "name": "Няндома",
+        "region_id": 29
+    },
+    {
+        "name": "Облучье",
+        "region_id": 79
+    },
+    {
+        "name": "Обнинск",
+        "region_id": 40
+    },
+    {
+        "name": "Обоянь",
+        "region_id": 46
+    },
+    {
+        "name": "Обь",
+        "region_id": 54
+    },
+    {
+        "name": "Одинцово",
+        "region_id": 50
+    },
+    {
+        "name": "Ожерелье",
+        "region_id": 50
+    },
+    {
+        "name": "Озерск",
+        "region_id": 39
+    },
+    {
+        "name": "Озерск",
+        "region_id": 74
+    },
+    {
+        "name": "Озеры",
+        "region_id": 50
+    },
+    {
+        "name": "Октябрьск",
+        "region_id": 63
+    },
+    {
+        "name": "Октябрьский",
+        "region_id": 2
+    },
+    {
+        "name": "Окуловка",
+        "region_id": 53
+    },
+    {
+        "name": "Олекминск",
+        "region_id": 14
+    },
+    {
+        "name": "Оленегорск",
+        "region_id": 51
+    },
+    {
+        "name": "Оленегорск-1",
+        "region_id": 51
+    },
+    {
+        "name": "Оленегорск-2",
+        "region_id": 51
+    },
+    {
+        "name": "Оленегорск-4",
+        "region_id": 51
+    },
+    {
+        "name": "Олонец",
+        "region_id": 10
+    },
+    {
+        "name": "Омск",
+        "region_id": 55
+    },
+    {
+        "name": "Омутнинск",
+        "region_id": 43
+    },
+    {
+        "name": "Онега",
+        "region_id": 29
+    },
+    {
+        "name": "Опочка",
+        "region_id": 60
+    },
+    {
+        "name": "Орёл",
+        "region_id": 57
+    },
+    {
+        "name": "Оренбург",
+        "region_id": 56
+    },
+    {
+        "name": "Орехово-Зуево",
+        "region_id": 50
+    },
+    {
+        "name": "Орлов",
+        "region_id": 43
+    },
+    {
+        "name": "Орск",
+        "region_id": 56
+    },
+    {
+        "name": "Оса",
+        "region_id": 59
+    },
+    {
+        "name": "Осинники",
+        "region_id": 42
+    },
+    {
+        "name": "Осташков",
+        "region_id": 69
+    },
+    {
+        "name": "Остров",
+        "region_id": 60
+    },
+    {
+        "name": "Островной",
+        "region_id": 51
+    },
+    {
+        "name": "Острогожск",
+        "region_id": 36
+    },
+    {
+        "name": "Отрадное",
+        "region_id": 47
+    },
+    {
+        "name": "Отрадный",
+        "region_id": 63
+    },
+    {
+        "name": "Оха",
+        "region_id": 65
+    },
+    {
+        "name": "Оханск",
+        "region_id": 59
+    },
+    {
+        "name": "Очер",
+        "region_id": 59
+    },
+    {
+        "name": "Павлово",
+        "region_id": 52
+    },
+    {
+        "name": "Павловск",
+        "region_id": 36
+    },
+    {
+        "name": "Павловск",
+        "region_id": 78
+    },
+    {
+        "name": "Павловский Посад",
+        "region_id": 50
+    },
+    {
+        "name": "Палласовка",
+        "region_id": 34
+    },
+    {
+        "name": "Партизанск",
+        "region_id": 25
+    },
+    {
+        "name": "Певек",
+        "region_id": 87
+    },
+    {
+        "name": "Пенза",
+        "region_id": 58
+    },
+    {
+        "name": "Первомайск",
+        "region_id": 52
+    },
+    {
+        "name": "Первоуральск",
+        "region_id": 66
+    },
+    {
+        "name": "Перевоз",
+        "region_id": 52
+    },
+    {
+        "name": "Пересвет",
+        "region_id": 50
+    },
+    {
+        "name": "Переславль-Залесский",
+        "region_id": 76
+    },
+    {
+        "name": "Пермь",
+        "region_id": 59
+    },
+    {
+        "name": "Пестово",
+        "region_id": 53
+    },
+    {
+        "name": "Петергоф",
+        "region_id": 78
+    },
+    {
+        "name": "Петров Вал",
+        "region_id": 34
+    },
+    {
+        "name": "Петровск",
+        "region_id": 64
+    },
+    {
+        "name": "Петровск-Забайкальский",
+        "region_id": 75
+    },
+    {
+        "name": "Петрозаводск",
+        "region_id": 10
+    },
+    {
+        "name": "Петропавловск-Камчатский",
+        "region_id": 41
+    },
+    {
+        "name": "Петухово",
+        "region_id": 45
+    },
+    {
+        "name": "Петушки",
+        "region_id": 33
+    },
+    {
+        "name": "Печора",
+        "region_id": 11
+    },
+    {
+        "name": "Печоры",
+        "region_id": 60
+    },
+    {
+        "name": "Пикалево",
+        "region_id": 47
+    },
+    {
+        "name": "Пионерский",
+        "region_id": 39
+    },
+    {
+        "name": "Питкяранта",
+        "region_id": 10
+    },
+    {
+        "name": "Плавск",
+        "region_id": 71
+    },
+    {
+        "name": "Пласт",
+        "region_id": 74
+    },
+    {
+        "name": "Плес",
+        "region_id": 37
+    },
+    {
+        "name": "Поворино",
+        "region_id": 36
+    },
+    {
+        "name": "Подгорное",
+        "region_id": 91
+    },
+    {
+        "name": "Подольск",
+        "region_id": 50
+    },
+    {
+        "name": "Подпорожье",
+        "region_id": 47
+    },
+    {
+        "name": "Покачи",
+        "region_id": 86
+    },
+    {
+        "name": "Покров",
+        "region_id": 33
+    },
+    {
+        "name": "Покровск",
+        "region_id": 14
+    },
+    {
+        "name": "Полевской",
+        "region_id": 66
+    },
+    {
+        "name": "Полесск",
+        "region_id": 39
+    },
+    {
+        "name": "Полысаево",
+        "region_id": 42
+    },
+    {
+        "name": "Полярные Зори",
+        "region_id": 51
+    },
+    {
+        "name": "Полярный",
+        "region_id": 51
+    },
+    {
+        "name": "Поронайск",
+        "region_id": 65
+    },
+    {
+        "name": "Порхов",
+        "region_id": 60
+    },
+    {
+        "name": "Похвистнево",
+        "region_id": 63
+    },
+    {
+        "name": "Почеп",
+        "region_id": 32
+    },
+    {
+        "name": "Починок",
+        "region_id": 67
+    },
+    {
+        "name": "Пошехонье",
+        "region_id": 76
+    },
+    {
+        "name": "Правдинск",
+        "region_id": 39
+    },
+    {
+        "name": "Приволжск",
+        "region_id": 37
+    },
+    {
+        "name": "Приморск",
+        "region_id": 39
+    },
+    {
+        "name": "Приморск",
+        "region_id": 47
+    },
+    {
+        "name": "Приморско-Ахтарск",
+        "region_id": 23
+    },
+    {
+        "name": "Приозерск",
+        "region_id": 47
+    },
+    {
+        "name": "Прокопьевск",
+        "region_id": 42
+    },
+    {
+        "name": "Пролетарск",
+        "region_id": 61
+    },
+    {
+        "name": "Протвино",
+        "region_id": 50
+    },
+    {
+        "name": "Прохладный",
+        "region_id": 7
+    },
+    {
+        "name": "Псков",
+        "region_id": 60
+    },
+    {
+        "name": "Пугачев",
+        "region_id": 64
+    },
+    {
+        "name": "Пудож",
+        "region_id": 10
+    },
+    {
+        "name": "Пустошка",
+        "region_id": 60
+    },
+    {
+        "name": "Пучеж",
+        "region_id": 37
+    },
+    {
+        "name": "Пушкин",
+        "region_id": 78
+    },
+    {
+        "name": "Пушкино",
+        "region_id": 50
+    },
+    {
+        "name": "Пущино",
+        "region_id": 50
+    },
+    {
+        "name": "Пыталово",
+        "region_id": 60
+    },
+    {
+        "name": "Пыть-Ях",
+        "region_id": 86
+    },
+    {
+        "name": "Пятигорск",
+        "region_id": 26
+    },
+    {
+        "name": "Радужный",
+        "region_id": 33
+    },
+    {
+        "name": "Радужный",
+        "region_id": 86
+    },
+    {
+        "name": "Райчихинск",
+        "region_id": 28
+    },
+    {
+        "name": "Раменское",
+        "region_id": 50
+    },
+    {
+        "name": "Рассказово",
+        "region_id": 68
+    },
+    {
+        "name": "Ревда",
+        "region_id": 66
+    },
+    {
+        "name": "Реж",
+        "region_id": 66
+    },
+    {
+        "name": "Реутов",
+        "region_id": 50
+    },
+    {
+        "name": "Ржев",
+        "region_id": 69
+    },
+    {
+        "name": "Родники",
+        "region_id": 37
+    },
+    {
+        "name": "Рославль",
+        "region_id": 67
+    },
+    {
+        "name": "Россошь",
+        "region_id": 36
+    },
+    {
+        "name": "Ростов",
+        "region_id": 76
+    },
+    {
+        "name": "Ростов-на-Дону",
+        "region_id": 61
+    },
+    {
+        "name": "Рошаль",
+        "region_id": 50
+    },
+    {
+        "name": "Ртищево",
+        "region_id": 64
+    },
+    {
+        "name": "Рубцовск",
+        "region_id": 22
+    },
+    {
+        "name": "Рудня",
+        "region_id": 67
+    },
+    {
+        "name": "Руза",
+        "region_id": 50
+    },
+    {
+        "name": "Рузаевка",
+        "region_id": 13
+    },
+    {
+        "name": "Рыбинск",
+        "region_id": 76
+    },
+    {
+        "name": "Рыбное",
+        "region_id": 62
+    },
+    {
+        "name": "Рыльск",
+        "region_id": 46
+    },
+    {
+        "name": "Ряжск",
+        "region_id": 62
+    },
+    {
+        "name": "Рязань",
+        "region_id": 62
+    },
+    {
+        "name": "Саки",
+        "region_id": 91
+    },
+    {
+        "name": "Саки",
+        "region_id": 91
+    },
+    {
+        "name": "Салават",
+        "region_id": 2
+    },
+    {
+        "name": "Салаир",
+        "region_id": 42
+    },
+    {
+        "name": "Салехард",
+        "region_id": 89
+    },
+    {
+        "name": "Сальск",
+        "region_id": 61
+    },
+    {
+        "name": "Самара",
+        "region_id": 63
+    },
+    {
+        "name": "Санкт-Петербург",
+        "region_id": 78
+    },
+    {
+        "name": "Саранск",
+        "region_id": 13
+    },
+    {
+        "name": "Сарапул",
+        "region_id": 18
+    },
+    {
+        "name": "Саратов",
+        "region_id": 64
+    },
+    {
+        "name": "Саров",
+        "region_id": 52
+    },
+    {
+        "name": "Сасово",
+        "region_id": 62
+    },
+    {
+        "name": "Сатка",
+        "region_id": 74
+    },
+    {
+        "name": "Сафоново",
+        "region_id": 67
+    },
+    {
+        "name": "Саяногорск",
+        "region_id": 19
+    },
+    {
+        "name": "Саянск",
+        "region_id": 38
+    },
+    {
+        "name": "Светлогорск",
+        "region_id": 39
+    },
+    {
+        "name": "Светлоград",
+        "region_id": 26
+    },
+    {
+        "name": "Светлый",
+        "region_id": 39
+    },
+    {
+        "name": "Светогорск",
+        "region_id": 47
+    },
+    {
+        "name": "Свирск",
+        "region_id": 38
+    },
+    {
+        "name": "Свободный",
+        "region_id": 28
+    },
+    {
+        "name": "Себеж",
+        "region_id": 60
+    },
+    {
+        "name": "Севастополь",
+        "region_id": 92
+    },
+    {
+        "name": "Северобайкальск",
+        "region_id": 3
+    },
+    {
+        "name": "Северодвинск",
+        "region_id": 29
+    },
+    {
+        "name": "Северо-Курильск",
+        "region_id": 65
+    },
+    {
+        "name": "Североморск",
+        "region_id": 51
+    },
+    {
+        "name": "Североуральск",
+        "region_id": 66
+    },
+    {
+        "name": "Северск",
+        "region_id": 70
+    },
+    {
+        "name": "Севск",
+        "region_id": 32
+    },
+    {
+        "name": "Сегежа",
+        "region_id": 10
+    },
+    {
+        "name": "Сельцо",
+        "region_id": 32
+    },
+    {
+        "name": "Семенов",
+        "region_id": 52
+    },
+    {
+        "name": "Семикаракорск",
+        "region_id": 61
+    },
+    {
+        "name": "Семилуки",
+        "region_id": 36
+    },
+    {
+        "name": "Сенгилей",
+        "region_id": 73
+    },
+    {
+        "name": "Серафимович",
+        "region_id": 34
+    },
+    {
+        "name": "Сергач",
+        "region_id": 52
+    },
+    {
+        "name": "Сергиев Посад",
+        "region_id": 50
+    },
+    {
+        "name": "Сергиев Посад-7",
+        "region_id": 50
+    },
+    {
+        "name": "Сердобск",
+        "region_id": 58
+    },
+    {
+        "name": "Серов",
+        "region_id": 66
+    },
+    {
+        "name": "Серпухов",
+        "region_id": 50
+    },
+    {
+        "name": "Сертолово",
+        "region_id": 47
+    },
+    {
+        "name": "Сестрорецк",
+        "region_id": 78
+    },
+    {
+        "name": "Сибай",
+        "region_id": 2
+    },
+    {
+        "name": "Сим",
+        "region_id": 74
+    },
+    {
+        "name": "Симферополь",
+        "region_id": 91
+    },
+    {
+        "name": "Сковородино",
+        "region_id": 28
+    },
+    {
+        "name": "Скопин",
+        "region_id": 62
+    },
+    {
+        "name": "Славгород",
+        "region_id": 22
+    },
+    {
+        "name": "Славск",
+        "region_id": 39
+    },
+    {
+        "name": "Славянск-на-Кубани",
+        "region_id": 23
+    },
+    {
+        "name": "Сланцы",
+        "region_id": 47
+    },
+    {
+        "name": "Слободской",
+        "region_id": 43
+    },
+    {
+        "name": "Слюдянка",
+        "region_id": 38
+    },
+    {
+        "name": "Смоленск",
+        "region_id": 67
+    },
+    {
+        "name": "Снегири",
+        "region_id": 50
+    },
+    {
+        "name": "Снежинск",
+        "region_id": 74
+    },
+    {
+        "name": "Снежногорск",
+        "region_id": 51
+    },
+    {
+        "name": "Собинка",
+        "region_id": 33
+    },
+    {
+        "name": "Советск",
+        "region_id": 39
+    },
+    {
+        "name": "Советск",
+        "region_id": 43
+    },
+    {
+        "name": "Советск",
+        "region_id": 71
+    },
+    {
+        "name": "Советская Гавань",
+        "region_id": 27
+    },
+    {
+        "name": "Советский",
+        "region_id": 86
+    },
+    {
+        "name": "Сокол",
+        "region_id": 35
+    },
+    {
+        "name": "Солигалич",
+        "region_id": 44
+    },
+    {
+        "name": "Соликамск",
+        "region_id": 59
+    },
+    {
+        "name": "Солнечногорск",
+        "region_id": 50
+    },
+    {
+        "name": "Солнечногорск-2",
+        "region_id": 50
+    },
+    {
+        "name": "Солнечногорск-25",
+        "region_id": 50
+    },
+    {
+        "name": "Солнечногорск-30",
+        "region_id": 50
+    },
+    {
+        "name": "Солнечногорск-7",
+        "region_id": 50
+    },
+    {
+        "name": "Сольвычегодск",
+        "region_id": 29
+    },
+    {
+        "name": "Соль-Илецк",
+        "region_id": 56
+    },
+    {
+        "name": "Сольцы",
+        "region_id": 53
+    },
+    {
+        "name": "Сольцы 2",
+        "region_id": 53
+    },
+    {
+        "name": "Сорочинск",
+        "region_id": 56
+    },
+    {
+        "name": "Сорск",
+        "region_id": 19
+    },
+    {
+        "name": "Сортавала",
+        "region_id": 10
+    },
+    {
+        "name": "Сосенский",
+        "region_id": 40
+    },
+    {
+        "name": "Сосновка",
+        "region_id": 43
+    },
+    {
+        "name": "Сосновоборск",
+        "region_id": 24
+    },
+    {
+        "name": "Сосновый Бор",
+        "region_id": 47
+    },
+    {
+        "name": "Сосногорск",
+        "region_id": 11
+    },
+    {
+        "name": "Сочи",
+        "region_id": 23
+    },
+    {
+        "name": "Спас-Деменск",
+        "region_id": 40
+    },
+    {
+        "name": "Спас-Клепики",
+        "region_id": 62
+    },
+    {
+        "name": "Спасск",
+        "region_id": 58
+    },
+    {
+        "name": "Спасск-Дальний",
+        "region_id": 25
+    },
+    {
+        "name": "Спасск-Рязанский",
+        "region_id": 62
+    },
+    {
+        "name": "Среднеколымск",
+        "region_id": 14
+    },
+    {
+        "name": "Среднеуральск",
+        "region_id": 66
+    },
+    {
+        "name": "Сретенск",
+        "region_id": 75
+    },
+    {
+        "name": "Ставрополь",
+        "region_id": 26
+    },
+    {
+        "name": "Старая Купавна",
+        "region_id": 50
+    },
+    {
+        "name": "Старая Русса",
+        "region_id": 53
+    },
+    {
+        "name": "Старица",
+        "region_id": 69
+    },
+    {
+        "name": "Стародуб",
+        "region_id": 32
+    },
+    {
+        "name": "Старый крым",
+        "region_id": 91
+    },
+    {
+        "name": "Старый Оскол",
+        "region_id": 31
+    },
+    {
+        "name": "Стерлитамак",
+        "region_id": 2
+    },
+    {
+        "name": "Стрежевой",
+        "region_id": 70
+    },
+    {
+        "name": "Строитель",
+        "region_id": 31
+    },
+    {
+        "name": "Струнино",
+        "region_id": 33
+    },
+    {
+        "name": "Ступино",
+        "region_id": 50
+    },
+    {
+        "name": "Суворов",
+        "region_id": 71
+    },
+    {
+        "name": "Судак",
+        "region_id": 91
+    },
+    {
+        "name": "Суджа",
+        "region_id": 46
+    },
+    {
+        "name": "Судогда",
+        "region_id": 33
+    },
+    {
+        "name": "Суздаль",
+        "region_id": 33
+    },
+    {
+        "name": "Суоярви",
+        "region_id": 10
+    },
+    {
+        "name": "Сураж",
+        "region_id": 32
+    },
+    {
+        "name": "Сургут",
+        "region_id": 86
+    },
+    {
+        "name": "Суровикино",
+        "region_id": 34
+    },
+    {
+        "name": "Сурск",
+        "region_id": 58
+    },
+    {
+        "name": "Сусуман",
+        "region_id": 49
+    },
+    {
+        "name": "Сухиничи",
+        "region_id": 40
+    },
+    {
+        "name": "Сухой Лог",
+        "region_id": 66
+    },
+    {
+        "name": "Сызрань",
+        "region_id": 63
+    },
+    {
+        "name": "Сыктывкар",
+        "region_id": 11
+    },
+    {
+        "name": "Сысерть",
+        "region_id": 66
+    },
+    {
+        "name": "Сычевка",
+        "region_id": 67
+    },
+    {
+        "name": "Сясьстрой",
+        "region_id": 47
+    },
+    {
+        "name": "Тавда",
+        "region_id": 66
+    },
+    {
+        "name": "Таганрог",
+        "region_id": 61
+    },
+    {
+        "name": "Тайга",
+        "region_id": 42
+    },
+    {
+        "name": "Тайшет",
+        "region_id": 38
+    },
+    {
+        "name": "Талдом",
+        "region_id": 50
+    },
+    {
+        "name": "Талица",
+        "region_id": 66
+    },
+    {
+        "name": "Тамбов",
+        "region_id": 68
+    },
+    {
+        "name": "Тара",
+        "region_id": 55
+    },
+    {
+        "name": "Тарко-Сале",
+        "region_id": 89
+    },
+    {
+        "name": "Таруса",
+        "region_id": 40
+    },
+    {
+        "name": "Татарск",
+        "region_id": 54
+    },
+    {
+        "name": "Таштагол",
+        "region_id": 42
+    },
+    {
+        "name": "Тверь",
+        "region_id": 69
+    },
+    {
+        "name": "Теберда",
+        "region_id": 9
+    },
+    {
+        "name": "Тейково",
+        "region_id": 37
+    },
+    {
+        "name": "Темников",
+        "region_id": 13
+    },
+    {
+        "name": "Темрюк",
+        "region_id": 23
+    },
+    {
+        "name": "Терек",
+        "region_id": 7
+    },
+    {
+        "name": "Тетюши",
+        "region_id": 16
+    },
+    {
+        "name": "Тимашевск",
+        "region_id": 23
+    },
+    {
+        "name": "Тихвин",
+        "region_id": 47
+    },
+    {
+        "name": "Тихорецк",
+        "region_id": 23
+    },
+    {
+        "name": "Тобольск",
+        "region_id": 72
+    },
+    {
+        "name": "Тогучин",
+        "region_id": 54
+    },
+    {
+        "name": "Тольятти",
+        "region_id": 63
+    },
+    {
+        "name": "Томари",
+        "region_id": 65
+    },
+    {
+        "name": "Томмот",
+        "region_id": 14
+    },
+    {
+        "name": "Томск",
+        "region_id": 70
+    },
+    {
+        "name": "Топки",
+        "region_id": 42
+    },
+    {
+        "name": "Торжок",
+        "region_id": 69
+    },
+    {
+        "name": "Торопец",
+        "region_id": 69
+    },
+    {
+        "name": "Тосно",
+        "region_id": 47
+    },
+    {
+        "name": "Тотьма",
+        "region_id": 35
+    },
+    {
+        "name": "Трехгорный",
+        "region_id": 74
+    },
+    {
+        "name": "Трехгорный-1",
+        "region_id": 74
+    },
+    {
+        "name": "Троицк",
+        "region_id": 74
+    },
+    {
+        "name": "Троицк",
+        "region_id": 77
+    },
+    {
+        "name": "Трубчевск",
+        "region_id": 32
+    },
+    {
+        "name": "Туапсе",
+        "region_id": 23
+    },
+    {
+        "name": "Туймазы",
+        "region_id": 2
+    },
+    {
+        "name": "Тула",
+        "region_id": 71
+    },
+    {
+        "name": "Тулун",
+        "region_id": 38
+    },
+    {
+        "name": "Туран",
+        "region_id": 17
+    },
+    {
+        "name": "Туринск",
+        "region_id": 66
+    },
+    {
+        "name": "Тутаев",
+        "region_id": 76
+    },
+    {
+        "name": "Тында",
+        "region_id": 28
+    },
+    {
+        "name": "Тырныауз",
+        "region_id": 7
+    },
+    {
+        "name": "Тюкалинск",
+        "region_id": 55
+    },
+    {
+        "name": "Тюмень",
+        "region_id": 72
+    },
+    {
+        "name": "Уварово",
+        "region_id": 68
+    },
+    {
+        "name": "Углегорск",
+        "region_id": 65
+    },
+    {
+        "name": "Углич",
+        "region_id": 76
+    },
+    {
+        "name": "Удачный",
+        "region_id": 14
+    },
+    {
+        "name": "Удомля",
+        "region_id": 69
+    },
+    {
+        "name": "Ужур",
+        "region_id": 24
+    },
+    {
+        "name": "Узловая",
+        "region_id": 71
+    },
+    {
+        "name": "Улан-Удэ",
+        "region_id": 3
+    },
+    {
+        "name": "Ульяновск",
+        "region_id": 73
+    },
+    {
+        "name": "Унеча",
+        "region_id": 32
+    },
+    {
+        "name": "Урай",
+        "region_id": 86
+    },
+    {
+        "name": "Урень",
+        "region_id": 52
+    },
+    {
+        "name": "Уржум",
+        "region_id": 43
+    },
+    {
+        "name": "Урус-Мартан",
+        "region_id": 20
+    },
+    {
+        "name": "Урюпинск",
+        "region_id": 34
+    },
+    {
+        "name": "Усинск",
+        "region_id": 11
+    },
+    {
+        "name": "Усмань",
+        "region_id": 48
+    },
+    {
+        "name": "Усолье",
+        "region_id": 59
+    },
+    {
+        "name": "Усолье-Сибирское",
+        "region_id": 38
+    },
+    {
+        "name": "Уссурийск",
+        "region_id": 25
+    },
+    {
+        "name": "Усть-Джегута",
+        "region_id": 9
+    },
+    {
+        "name": "Усть-Илимск",
+        "region_id": 38
+    },
+    {
+        "name": "Усть-Катав",
+        "region_id": 74
+    },
+    {
+        "name": "Усть-Кут",
+        "region_id": 38
+    },
+    {
+        "name": "Усть-Лабинск",
+        "region_id": 23
+    },
+    {
+        "name": "Устюжна",
+        "region_id": 35
+    },
+    {
+        "name": "Уфа",
+        "region_id": 2
+    },
+    {
+        "name": "Ухта",
+        "region_id": 11
+    },
+    {
+        "name": "Учалы",
+        "region_id": 2
+    },
+    {
+        "name": "Уяр",
+        "region_id": 24
+    },
+    {
+        "name": "Фатеж",
+        "region_id": 46
+    },
+    {
+        "name": "Феодосия",
+        "region_id": 91
+    },
+    {
+        "name": "Фокино",
+        "region_id": 25
+    },
+    {
+        "name": "Фокино",
+        "region_id": 32
+    },
+    {
+        "name": "Фролово",
+        "region_id": 34
+    },
+    {
+        "name": "Фрязино",
+        "region_id": 50
+    },
+    {
+        "name": "Фурманов",
+        "region_id": 37
+    },
+    {
+        "name": "Хабаровск",
+        "region_id": 27
+    },
+    {
+        "name": "Хадыженск",
+        "region_id": 23
+    },
+    {
+        "name": "Ханты-Мансийск",
+        "region_id": 86
+    },
+    {
+        "name": "Харабали",
+        "region_id": 30
+    },
+    {
+        "name": "Харовск",
+        "region_id": 35
+    },
+    {
+        "name": "Хасавюрт",
+        "region_id": 5
+    },
+    {
+        "name": "Хвалынск",
+        "region_id": 64
+    },
+    {
+        "name": "Хилок",
+        "region_id": 75
+    },
+    {
+        "name": "Химки",
+        "region_id": 50
+    },
+    {
+        "name": "Холм",
+        "region_id": 53
+    },
+    {
+        "name": "Холмск",
+        "region_id": 65
+    },
+    {
+        "name": "Хотьково",
+        "region_id": 50
+    },
+    {
+        "name": "Цивильск",
+        "region_id": 21
+    },
+    {
+        "name": "Цимлянск",
+        "region_id": 61
+    },
+    {
+        "name": "Чадан",
+        "region_id": 17
+    },
+    {
+        "name": "Чайковский",
+        "region_id": 59
+    },
+    {
+        "name": "Чапаевск",
+        "region_id": 63
+    },
+    {
+        "name": "Чаплыгин",
+        "region_id": 48
+    },
+    {
+        "name": "Чебаркуль",
+        "region_id": 74
+    },
+    {
+        "name": "Чебоксары",
+        "region_id": 21
+    },
+    {
+        "name": "Чегем",
+        "region_id": 7
+    },
+    {
+        "name": "Чекалин",
+        "region_id": 71
+    },
+    {
+        "name": "Челябинск",
+        "region_id": 74
+    },
+    {
+        "name": "Чердынь",
+        "region_id": 59
+    },
+    {
+        "name": "Черемхово",
+        "region_id": 38
+    },
+    {
+        "name": "Черепаново",
+        "region_id": 54
+    },
+    {
+        "name": "Череповец",
+        "region_id": 35
+    },
+    {
+        "name": "Черкесск",
+        "region_id": 9
+    },
+    {
+        "name": "Чермоз",
+        "region_id": 59
+    },
+    {
+        "name": "Черноголовка",
+        "region_id": 50
+    },
+    {
+        "name": "Черногорск",
+        "region_id": 19
+    },
+    {
+        "name": "Чернушка",
+        "region_id": 59
+    },
+    {
+        "name": "Черняховск",
+        "region_id": 39
+    },
+    {
+        "name": "Чехов",
+        "region_id": 50
+    },
+    {
+        "name": "Чехов-2",
+        "region_id": 50
+    },
+    {
+        "name": "Чехов-3",
+        "region_id": 50
+    },
+    {
+        "name": "Чехов-8",
+        "region_id": 50
+    },
+    {
+        "name": "Чистополь",
+        "region_id": 16
+    },
+    {
+        "name": "Чита",
+        "region_id": 75
+    },
+    {
+        "name": "Чкаловск",
+        "region_id": 52
+    },
+    {
+        "name": "Чудово",
+        "region_id": 53
+    },
+    {
+        "name": "Чулым",
+        "region_id": 54
+    },
+    {
+        "name": "Чулым-3",
+        "region_id": 54
+    },
+    {
+        "name": "Чусовой",
+        "region_id": 59
+    },
+    {
+        "name": "Чухлома",
+        "region_id": 44
+    },
+    {
+        "name": "Шагонар",
+        "region_id": 17
+    },
+    {
+        "name": "Шадринск",
+        "region_id": 45
+    },
+    {
+        "name": "Шали",
+        "region_id": 20
+    },
+    {
+        "name": "Шарыпово",
+        "region_id": 24
+    },
+    {
+        "name": "Шарья",
+        "region_id": 44
+    },
+    {
+        "name": "Шатура",
+        "region_id": 50
+    },
+    {
+        "name": "Шахтерск",
+        "region_id": 65
+    },
+    {
+        "name": "Шахты",
+        "region_id": 61
+    },
+    {
+        "name": "Шахунья",
+        "region_id": 52
+    },
+    {
+        "name": "Шацк",
+        "region_id": 62
+    },
+    {
+        "name": "Шебекино",
+        "region_id": 31
+    },
+    {
+        "name": "Шелехов",
+        "region_id": 38
+    },
+    {
+        "name": "Шенкурск",
+        "region_id": 29
+    },
+    {
+        "name": "Шилка",
+        "region_id": 75
+    },
+    {
+        "name": "Шимановск",
+        "region_id": 28
+    },
+    {
+        "name": "Шиханы",
+        "region_id": 64
+    },
+    {
+        "name": "Шлиссельбург",
+        "region_id": 47
+    },
+    {
+        "name": "Шумерля",
+        "region_id": 21
+    },
+    {
+        "name": "Шумиха",
+        "region_id": 45
+    },
+    {
+        "name": "Шуя",
+        "region_id": 37
+    },
+    {
+        "name": "Щекино",
+        "region_id": 71
+    },
+    {
+        "name": "Щелкино",
+        "region_id": 91
+    },
+    {
+        "name": "Щелково",
+        "region_id": 50
+    },
+    {
+        "name": "Щербинка",
+        "region_id": 77
+    },
+    {
+        "name": "Щигры",
+        "region_id": 46
+    },
+    {
+        "name": "Щучье",
+        "region_id": 45
+    },
+    {
+        "name": "Электрогорск",
+        "region_id": 50
+    },
+    {
+        "name": "Электросталь",
+        "region_id": 50
+    },
+    {
+        "name": "Электроугли",
+        "region_id": 50
+    },
+    {
+        "name": "Элиста",
+        "region_id": 8
+    },
+    {
+        "name": "Энгельс",
+        "region_id": 64
+    },
+    {
+        "name": "Энгельс-19",
+        "region_id": 64
+    },
+    {
+        "name": "Энгельс-2",
+        "region_id": 64
+    },
+    {
+        "name": "Эртиль",
+        "region_id": 36
+    },
+    {
+        "name": "Юбилейный",
+        "region_id": 50
+    },
+    {
+        "name": "Югорск",
+        "region_id": 86
+    },
+    {
+        "name": "Южа",
+        "region_id": 37
+    },
+    {
+        "name": "Южно-Сахалинск",
+        "region_id": 65
+    },
+    {
+        "name": "Южно-Сухокумск",
+        "region_id": 5
+    },
+    {
+        "name": "Южноуральск",
+        "region_id": 74
+    },
+    {
+        "name": "Юрга",
+        "region_id": 42
+    },
+    {
+        "name": "Юрьевец",
+        "region_id": 37
+    },
+    {
+        "name": "Юрьев-Польский",
+        "region_id": 33
+    },
+    {
+        "name": "Юрюзань",
+        "region_id": 74
+    },
+    {
+        "name": "Юхнов",
+        "region_id": 40
+    },
+    {
+        "name": "Юхнов-1",
+        "region_id": 40
+    },
+    {
+        "name": "Юхнов-2",
+        "region_id": 40
+    },
+    {
+        "name": "Ядрин",
+        "region_id": 21
+    },
+    {
+        "name": "Якутск",
+        "region_id": 14
+    },
+    {
+        "name": "Ялта",
+        "region_id": 91
+    },
+    {
+        "name": "Ялуторовск",
+        "region_id": 72
+    },
+    {
+        "name": "Янаул",
+        "region_id": 2
+    },
+    {
+        "name": "Яранск",
+        "region_id": 43
+    },
+    {
+        "name": "Яровое",
+        "region_id": 22
+    },
+    {
+        "name": "Ярославль",
+        "region_id": 76
+    },
+    {
+        "name": "Ярцево",
+        "region_id": 67
+    },
+    {
+        "name": "Ясногорск",
+        "region_id": 71
+    },
+    {
+        "name": "Ясный",
+        "region_id": 56
+    },
+    {
+        "name": "Яхрома",
+        "region_id": 50
+    }
+]

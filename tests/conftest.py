@@ -2,7 +2,7 @@ import pytest
 from sqlalchemy import create_engine
 from sqlalchemy.orm import Session
 
-from region_finder.models import Address, Alias, Base, Region
+from region_finder.models import Address, Alias, Base, Region, Town
 
 addresses = [
     Address(postcode='692910', locality='находка', region_id=25),
@@ -49,6 +49,12 @@ regions = [
     Region(name='Челябинская область', region_id=74,
            aliases=[Alias(name='челябинская')]),
 
+]
+
+towns = [
+    Town(name='губкинский', region_id=89),
+    Town(name='фурманов', region_id=37),
+    Town(name='шуя', region_id=37),
 ]
 
 

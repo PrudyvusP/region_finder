@@ -1,9 +1,9 @@
 from sqlalchemy import select
 
-from region_finder.models import Address, Alias, Region
+from region_finder.models import Address, Alias, Region, Town
 
 
-class TestRegionFinderWithSQLADB:
+class TestModel:
 
     def test_valid_table_names(self):
         """Корректные названия таблиц."""
@@ -11,6 +11,7 @@ class TestRegionFinderWithSQLADB:
         assert Region.__tablename__ == 'regions'
         assert Address.__tablename__ == 'addresses'
         assert Alias.__tablename__ == 'aliases'
+        assert Town.__tablename__ == 'towns'
 
     def test_valid_region(self, db_session):
         """Корректное добавление региона."""
@@ -52,6 +53,18 @@ class TestRegionFinderWithSQLADB:
         assert alias.region_id == 29
         assert str(alias) == '<Alias архангельская>'
 
+    def test_valid_town(self, db_session):
+        """Корректное добавление города."""
+
+        valid_town = Town(
+            name='архангельск',
+            region_id=29)
+        db_session.add(valid_town)
+        query = select(Town).where(Town.name == 'архангельск')
+        town = db_session.scalars(query).first()
+        assert town.region_id == 29
+        assert str(town) == '<Town архангельск>'
+
     def test_orm_relationships(self, db_session):
         """Корректное использование ORM-relationship."""
 
@@ -61,8 +74,12 @@ class TestRegionFinderWithSQLADB:
         alias = db_session.scalars(a_query).first()
         addr_query = select(Address).where(Address.postcode == '164567')
         address = db_session.scalars(addr_query).first()
+        t_query = select(Town).where(Town.name == 'архангельск')
+        town = db_session.scalars(t_query).first()
 
         assert region.aliases == [alias]
         assert alias.region == region
         assert address.region == region
         assert region.addresses == [address]
+        assert town.region == region
+        assert region.towns == [town]
