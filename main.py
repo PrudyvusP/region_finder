@@ -1,6 +1,7 @@
 import argparse
 
-from region_finder import RegionFinderWithSQLADB
+from region_finder import (RegionFinderWithKV, RegionDataGetter,
+                           RegionFinderWithSQLADB)
 from session import session
 
 
@@ -25,5 +26,24 @@ def main() -> None:
             print(address, r.define_regions())
 
 
+def main2() -> None:
+    """Более быстрая версия программы."""
+
+    geos = RegionDataGetter(session).get_all_data()
+
+    with open(parse_arguments(), 'r') as f, session:
+        addresses = [strq.strip('\n') for strq in f.readlines()]
+        for address in addresses:
+            finder = RegionFinderWithKV(address)
+            regions = finder.define_regions(
+                aliases=geos['aliases'],
+                towns=geos['towns'],
+                districts=geos['districts'],
+                settlements=geos['localities'],
+                ps_prefixes=geos['ps_prefixes']
+            )
+            print(address, regions)
+
+
 if __name__ == '__main__':
-    main()
+    main2()
