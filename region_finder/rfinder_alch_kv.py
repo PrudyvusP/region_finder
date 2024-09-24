@@ -169,20 +169,18 @@ class RegionFinderWithKV(RegionFinder):
 
         ps_prefixes = kwargs.get('ps_prefixes')
         aliases = kwargs.get('aliases')
+        towns = kwargs.get('towns')
 
-        regions_names = self.define_regions_by_param(
+        regions = self.define_regions_by_param(
             seq=aliases, regex_func=self._find_region_names)
         regions_postcodes_first_3 = self.define_regions_by_param(
             seq=ps_prefixes, regex_func=self._find_first_3_postcodes)
-        regions_names.update(regions_postcodes_first_3)
-        if regions_names:
-            return regions_names
-
-        towns = kwargs.get('towns')
         regions_towns = self.define_regions_by_param(
             seq=towns, regex_func=self._find_city_names)
-        if regions_towns:
-            return regions_towns
+        regions.update(regions_postcodes_first_3)
+        regions.update(regions_towns)
+        if regions:
+            return regions
 
         districts = kwargs.get('districts')
         regions_districts = self.define_regions_by_param(
