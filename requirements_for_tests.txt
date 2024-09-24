@@ -19,7 +19,7 @@ pluggy==1.5.0
 pycodestyle==2.12.1
 pyflakes==3.2.0
 pytest==8.3.3
-region-finder-ru==0.0.1
+region-finder-ru==0.0.2
 SQLAlchemy==2.0.35
 tomli==2.0.1
 typing-extensions==4.12.2
