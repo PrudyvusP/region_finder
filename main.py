@@ -1,7 +1,6 @@
 import argparse
 
-from region_finder import (RegionDataGetter,
-                           RegionFinderWithKV,
+from region_finder import (RegionFinderWithKV, RegionDataGetter,
                            RegionFinderWithSQLADB)
 from session import session
 

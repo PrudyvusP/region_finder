@@ -16,8 +16,8 @@ class RegionDataGetter:
 
     def get_regions(self) -> Dict[int, str]:
         """
-        SELECT region_id, name
-        FROM regions;
+            SELECT region_id, name
+            FROM regions;
         """
         regions_q = (
             self
@@ -30,8 +30,8 @@ class RegionDataGetter:
 
     def get_aliases(self) -> Dict[str, int]:
         """
-        SELECT name, region_id
-        FROM aliases;
+            SELECT name, region_id
+            FROM aliases;
         """
         aliases_q = (
             self
@@ -45,13 +45,13 @@ class RegionDataGetter:
 
     def get_unique_districts(self) -> Dict[str, int]:
         """
-        SELECT DISTINCT area, region_id
-        FROM addresses
-        WHERE addresses.area IN
-	        (SELECT addresses.area
-	        FROM addresses
-	        GROUP by addresses.area
-	        HAVING COUNT(DISTINCT addresses.region_id) = 1);
+            SELECT DISTINCT area, region_id
+            FROM addresses
+            WHERE addresses.area IN
+            (SELECT addresses.area
+            FROM addresses
+            GROUP by addresses.area
+            HAVING COUNT(DISTINCT addresses.region_id) = 1);
         """
         districts_subq = (
             select(Address.area)
@@ -71,13 +71,13 @@ class RegionDataGetter:
 
     def get_unique_towns(self) -> Dict[str, int]:
         """
-        SELECT DISTINCT name, region_id
-        FROM towns
-        WHERE towns.name IN
-	        (SELECT towns.name
-	        FROM towns
-	        GROUP by towns.name
-	        HAVING COUNT(DISTINCT towns.region_id) = 1);
+            SELECT DISTINCT name, region_id
+            FROM towns
+            WHERE towns.name IN
+            (SELECT towns.name
+            FROM towns
+            GROUP by towns.name
+            HAVING COUNT(DISTINCT towns.region_id) = 1);
         """
         towns_subq = (
             select(Town.name)
@@ -97,13 +97,12 @@ class RegionDataGetter:
 
     def get_unique_localities(self) -> Dict[str, int]:
         """
-        SELECT DISTINCT locality, region_id
-        FROM addresses
-        WHERE addresses.locality IN
-	        (SELECT addresses.locality
-	        FROM addresses
-	        GROUP by addresses.locality
-	        HAVING COUNT(DISTINCT addresses.region_id) = 1);
+            SELECT DISTINCT locality, region_id FROM addresses
+            WHERE addresses.locality IN
+            (SELECT addresses.locality
+            FROM addresses
+            GROUP by addresses.locality
+            HAVING COUNT(DISTINCT addresses.region_id) = 1);
         """
         localities_subq = (
             select(Address.locality)
@@ -123,9 +122,9 @@ class RegionDataGetter:
 
     def get_ps_prefixes(self) -> Dict[str, int]:
         """
-        SELECT SUBSTRING(postcode, 1, 3) AS ps_prefix, region_id
-        FROM addresses;
-        GROUP BY ps_prefix;
+            SELECT SUBSTRING(postcode, 1, 3) AS ps_prefix, region_id
+            FROM addresses;
+            GROUP BY ps_prefix;
         """
         postcodes_q = (
             self
