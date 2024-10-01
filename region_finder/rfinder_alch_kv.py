@@ -167,31 +167,18 @@ class RegionFinderWithKV(RegionFinder):
 
     def define_regions(self, **kwargs):
 
-        ps_prefixes = kwargs.get('ps_prefixes')
-        aliases = kwargs.get('aliases')
-        towns = kwargs.get('towns')
-
-        regions = self.define_regions_by_param(
-            seq=aliases, regex_func=self._find_region_names)
+        regions_name = self.define_regions_by_param(
+            seq=kwargs.get('aliases'),
+            regex_func=self._find_region_names)
         regions_postcodes_first_3 = self.define_regions_by_param(
-            seq=ps_prefixes, regex_func=self._find_first_3_postcodes)
+            seq=kwargs.get('ps_prefixes'),
+            regex_func=self._find_first_3_postcodes)
         regions_towns = self.define_regions_by_param(
-            seq=towns, regex_func=self._find_city_names)
-        regions.update(regions_postcodes_first_3)
-        regions.update(regions_towns)
-        if regions:
-            return regions
-
-        districts = kwargs.get('districts')
+            seq=kwargs.get('towns'), regex_func=self._find_city_names)
         regions_districts = self.define_regions_by_param(
-            seq=districts, regex_func=self._find_district_names)
-        if regions_districts:
-            return regions_districts
-
-        settlements = kwargs.get('settlements')
+            seq=kwargs.get('districts'), regex_func=self._find_district_names)
         regions_settlements = self.define_regions_by_param(
-            seq=settlements, regex_func=self._find_settlement_names)
-        if regions_settlements:
-            return regions_settlements
-
-        return {}
+            seq=kwargs.get('settlements'),
+            regex_func=self._find_settlement_names)
+        return (regions_name | regions_postcodes_first_3 | regions_towns
+                | regions_districts | regions_settlements)
