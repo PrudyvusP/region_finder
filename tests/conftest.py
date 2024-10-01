@@ -2,7 +2,10 @@ import pytest
 from sqlalchemy import create_engine
 from sqlalchemy.orm import Session
 
+from region_finder import RegionFinderWithKV, RegionDataGetter
 from region_finder.models import Address, Alias, Base, Region, Town
+
+DB_ENGINE = "sqlite://"
 
 addresses = [
     Address(postcode='692910', area=None, locality='находка', region_id=25),
@@ -61,12 +64,14 @@ towns = [
     Town(name='шуя', region_id=37),
     Town(name='советск', region_id=43),
     Town(name='советск', region_id=39),
+    Town(name='тарко-селе', region_id=89),
+    Town(name='великие луки', region_id=60),
 ]
 
 
 @pytest.fixture(scope='session')
 def engine():
-    engine = create_engine("sqlite://", echo=True)
+    engine = create_engine(DB_ENGINE, echo=False)
     yield engine
     engine.dispose()
 
@@ -101,6 +106,25 @@ def db_session_full(db_session):
 
     db_session.commit()
     yield db_session
+
+
+@pytest.fixture(scope="module")
+def get_geo_data(db_session_full):
+    return RegionDataGetter(db_session_full).get_all_data()
+
+
+@pytest.fixture
+def find_regions(get_geo_data):
+    def _find_regions(address):
+        finder = RegionFinderWithKV(address)
+        return finder.define_regions(
+            aliases=get_geo_data['aliases'],
+            towns=get_geo_data['towns'],
+            districts=get_geo_data['districts'],
+            settlements=get_geo_data['localities'],
+            ps_prefixes=get_geo_data['ps_prefixes'])
+
+    return _find_regions
 
 
 @pytest.fixture

@@ -1,4 +1,4 @@
-from region_finder.rfinder_alch_kv import RegionFinderWithKV, RegionDataGetter
+from region_finder.rfinder_alch_kv import RegionDataGetter
 
 
 class TestRegionDataGetter:
@@ -42,7 +42,8 @@ class TestRegionDataGetter:
     UNIQUE_DISTRICTS = ['выборгский', 'урванский', 'ямальский', 'ижморский',
                         'великолукский']
 
-    UNIQUE_TOWNS = ['губкинский', 'фурманов', 'шуя']
+    UNIQUE_TOWNS = [
+        'губкинский', 'фурманов', 'шуя', 'тарко-селе', 'великие луки']
 
     UNIQUE_LOCALITIES = ['находка', 'поляны', 'урвань',
                          'яр-сале', 'саяногорск', 'берикуль',
@@ -140,4 +141,121 @@ class TestRegionFinderWithKVr:
     """Класс TestRegionFinderWithKV используется для
     тестирования корректности определения регионов в адресной строке.
 
+    Методы
+    -------
+    test_find_by_name():
+        Проверяет корректность поиска по названию.
+    test_find_by_name_reverse():
+        Проверяет корректность поиска по названию в разном порядке.
+    test_find_by_name_w_hyphen():
+        Проверяет корректность поиска по названию, содержащему дефис.
+    test_find_by_postcode():
+        Проверяет корректность поиска по почтовому индексу.
+    test_find_by_unique_district():
+        Проверяет корректность поиска по уникальному району.
+    test_not_find_by_district_non_unique():
+        Проверяет отсутствие результатов поиска по неуникальным названиям
+        административных районов.
+    test_find_by_town():
+        Проверяет корректность поиска по названию города.
+    test_not_find_by_town_wo_meta():
+        Проверяет отсутствие результатов поиска без признаков городов,
+        районов или поселков.
+    test_not_find_by_town_non_unique():
+        Проверяет отсутствие результатов поиска по неуникальным названиям
+        городов.
+    test_find_by_town_w_double_name():
+        Проверяет корректность поиска по названию города из двух слов.
+    test_find_by_town_w_hyphen():
+         Проверяет корректность поиска по названию города, содержащему дефис.
+    test_find_by_unique_locality():
+        Проверяет корректность поиска по уникальному названию населенного
+        пункта.
+    test_find_by_several_ways():
+        Проверяет корректность поиска по нескольким критериям сразу.
+    test_not_find_by_non_unique_locality():
+        Проверяет отсутствие результатов поиска по неуникальным названиям
+        населенных пунктов.
     """
+
+    def test_find_by_name(self, find_regions):
+        """Корректно определяем регионы по названиям."""
+        address = 'Ивановская область, Кемеровская область'
+        assert {37, 42} == find_regions(address)
+
+    def test_find_by_name_reverse(self, find_regions):
+        """Корректно определяем регионы по названиям в любом порядке."""
+        address = 'Кабардино-Балкарская Республика, Республика Хакасия'
+        assert {7, 19} == find_regions(address)
+
+    def test_find_by_name_w_hyphen(self, find_regions):
+        """Корректно определяем регионы по названию, содержащему дефис."""
+        address = 'Ямало-Ненецкий автономный округ Яр-сале'
+        assert {89} == find_regions(address)
+
+    def test_find_by_postcode(self, find_regions):
+        """Корректно определяем регионы по почтовому индексу."""
+        address = ('188824 г. Поляны ул. Рофлов, д. 15,'
+                   '629700, Яр-сале, ул. Любая')
+        assert {47, 89} == find_regions(address)
+
+    def test_find_by_unique_district(self, find_regions):
+        """Корректно определяем регионы по административному району."""
+        address = 'Великолукский район ул. Любая'
+        assert {60} == find_regions(address)
+
+    def test_not_find_by_district_non_unique(self, find_regions):
+        """Корректно обрабатываем, если административный район неуникален в
+        разных регионах."""
+        address = 'Октябрьский район ул. Любая'
+        assert not find_regions(address), 'неуникальный район'
+
+    def test_find_by_town(self, find_regions):
+        """Корректно определяем регионы по административному району."""
+        address = 'г. Губкинский, ул. мира, д. 33 г. Шуя, д. 54'
+        assert {89, 37} == find_regions(address)
+
+    def test_not_find_by_town_wo_meta(self, find_regions):
+        """Корректно обрабатываем, если нет мета признаков городов,
+        районов или поселков."""
+        address = 'Губкинский, ул. мира, д. 33, Шуя, д. 54'
+        assert not find_regions(address), 'города обработались без мета'
+
+    def test_not_find_by_town_non_unique(self, find_regions):
+        """Корректно обрабатываем, если город неуникален среди регионов."""
+        address = 'г. Советск, ул. мира, д. 33'
+        assert not find_regions(address), 'неуникальный город'
+
+    def test_find_by_town_w_double_name(self, find_regions):
+        """Корректно определяем регионы, если название города состоит из
+        двух слов."""
+        address = 'г. Великие Луки, д. 54'
+        assert {60} == find_regions(address)
+
+    def test_find_by_town_w_hyphen(self, find_regions):
+        """Корректно определяем регионы, если название города
+        содержит дефис."""
+        address = 'г. Тарко-селе, д. 54'
+        assert {89} == find_regions(address)
+
+    def test_find_by_unique_locality(self, find_regions):
+        """Корректно определяем регионы по уникальному названию
+        населенного пункта."""
+        address = 'Кабардино-Балкария п. Урвань д. 2'
+        assert {7} == find_regions(address)
+
+    def test_find_by_several_ways(self, find_regions):
+        """Корректно определяем регионы по разным критериям."""
+        address = ('Москва, ул. Тестеров, д. 55\n'
+                   'г. Советск, ул. Мира 14\n'
+                   'область Калининградская г. Калининград\n'
+                   'район Ижморский, п. Берикуль, д. 14\n'
+                   'Ямало-Ненецкий автономный округ, г. Губкинский\n'
+                   'г. Москва, ул. адмирала Макарова')
+        assert {77, 39, 42, 89} == find_regions(address)
+
+    def test_not_find_by_non_unique_locality(self, find_regions):
+        """Корректно определяем регионы по уникальному названию
+        населенного пункта."""
+        address = 'п. Иваново, ул. Мира 555'
+        assert not find_regions(address), 'неуникальный населенный пункт'

@@ -1,7 +1,6 @@
 import argparse
 
-from region_finder import (RegionFinderWithKV, RegionDataGetter,
-                           RegionFinderWithSQLADB)
+from region_finder import RegionFinderWithKV, RegionDataGetter
 from session import session
 
 
@@ -16,18 +15,8 @@ def parse_arguments() -> str:
     return args.filename
 
 
-def main() -> None:
-    """Точка входа в программу."""
-
-    with open(parse_arguments(), 'r') as f, session:
-        addresses = [strq.strip('\n') for strq in f.readlines()]
-        for address in addresses:
-            r = RegionFinderWithSQLADB(address, session=session)
-            print(address, r.define_regions())
-
-
 def main2() -> None:
-    """Более быстрая версия программы."""
+    """Точка входа в программу."""
 
     geos = RegionDataGetter(session).get_all_data()
 
