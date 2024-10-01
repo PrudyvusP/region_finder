@@ -6,47 +6,51 @@ from region_finder.models import Address, Alias, Region, Town
 
 
 class TestModel:
-    """Тестирование моделей.
+    """Класс TestModel используется для
+    тестирования логики моделей и их связей
+
+    Статические методы
+    -------
+    check_valid_table_name():
+        Проверяет название таблиц.
+    add_instance_and_commit():
+        Добавляет сущность в сессию и делает коммит.
 
     Методы
     -------
-    check_valid_table_name():
-        .
-    add_instance_and_commit():
-        .
-
     test_valid_tablename_region():
-        .
+        Проверяет название таблицы с регионами.
     test_valid_tablename_address():
-        .
+        Проверяет название таблицы с адресами.
     test_valid_tablename_town():
-        .
+        Проверяет название таблицы с городами.
     test_valid_tablename_alias():
-        .
+        Проверяет название таблицы с алиасами регионов.
     test_add_valid_region():
-        .
+        Проверяет добавление в БД корректного региона.
     test_add_valid_address():
-        .
+        Проверяет добавление в БД корректного адреса.
     test_add_valid_alias():
-        .
+        Проверяет добавление в БД корректного алиаса регионов.
     test_add_valid_town():
-        .
+        Проверяет добавление в БД корректного города.
     test_orm_relationships():
-        .
+        Проверяет связи между таблицами.
     test_add_region_wo_name():
-        .
+        Проверяет попытку добавить регион без обязательного названия.
     test_add_address_wo_region_id():
-        .
+        Проверяет попытку добавить адрес без обязательного id региона.
     test_add_alias_wo_name():
-        .
+        Проверяет попытку добавить алиас региона без обязательного названия
+        алиаса.
     test_add_alias_wo_region_id():
-        .
+        Проверяет попытку добавить алиас региона без обязательного id региона.
     test_add_town_wo_name():
-        .
+        Проверяет попытку добавить город без обязательного названия.
     test_add_town_wo_region_id():
-        .
+        Проверяет попытку добавить город без обязательного id региона.
     test_add_double_region_id():
-        .
+        Проверяет попытку добавить два раза один и тот же регион.
     """
 
     @staticmethod
