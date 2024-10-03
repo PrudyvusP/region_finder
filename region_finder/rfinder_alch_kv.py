@@ -1,12 +1,9 @@
-import re
 from typing import Dict
 
 from region_finder_ru.region_finder_ru import RegionFinder
 from sqlalchemy import distinct, func, select
 
 from region_finder.models import Address, Alias, Region, Town
-
-word_splitter_regex = re.compile(r'[.;,\n\t: ]')
 
 
 class RegionDataGetter:
@@ -151,9 +148,6 @@ class RegionDataGetter:
 
 
 class RegionFinderWithKV(RegionFinder):
-
-    def split_address_by_symbols(self):
-        return word_splitter_regex.split(self.address)
 
     @staticmethod
     def define_regions_by_param(seq, regex_func) -> set:
